@@ -1,0 +1,30 @@
+{
+    "appName": "Моя коллекция фильмов",
+    "languages": {
+        "english": "Анг",
+        "russian": "Рус"
+    },
+    "movie": {
+        "russianName": "Название",
+        "originalName": "Оригинальное название",
+        "raiting":"Рейтинг",
+        "actors": "Актеры",
+        "country": "Страна",
+        "director": "Режиссёр",
+        "duration": "Время",
+        "genre": "Жанр",
+        "more": "Дополнительно",
+        "quality": "Качество",
+        "translation": "Перевод",
+        "year": "Год",
+        "logo": "Постер"
+
+    },
+    "back": "Вернуться у списку",
+    "emptyFilter": "Все поля",
+    "defaultOrder": "Без сортировки",
+    "by": "по",
+     "search": "Поиск",
+     "order": "Сортировка",
+    "hasNoMovies": "В настоящее время фильмы отсутствуют"
+}

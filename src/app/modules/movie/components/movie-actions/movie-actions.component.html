@@ -1,0 +1,23 @@
+<div class="actions-container">
+    <div class="action-content">
+        <div class="action-title text--description">{{'search' | translate}}:</div>
+        <input type="text"
+               class="field"
+               [(ngModel)]="search">
+        <select class="field"
+                [(ngModel)]="filter">
+            <option value="">{{'emptyFilter' | translate}}</option>
+            <option *ngFor="let filterItem of filterList"
+                    value="{{filterItem}}">{{'movie.' + filterItem | translate}}</option>
+        </select>
+    </div>
+    <div class="action-content">
+        <div class="action-title text--description">{{'order' | translate}}:</div>
+        <select class="field"
+                [(ngModel)]="order">
+            <option value=""> {{'defaultOrder' | translate}} </option>
+            <option *ngFor="let orderItem of orderList"
+                    value="{{orderItem}}">{{'movie.' + orderItem | translate}}</option>
+        </select>
+    </div>
+</div>

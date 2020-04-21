@@ -1,0 +1,29 @@
+@import "./../../../../assets/styles/colors";
+
+.btn-language {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  color: $gray-lightest;
+  font-weight: 100;
+  padding: 4px 8px;
+  &:hover {
+    color: $gray-lighter;
+  }
+
+}
+
+.btn-language+.btn-language {
+  position: relative;
+  margin-left: 20px;
+
+  &::before {
+    content: '|';
+    position: absolute;
+    left: -11px;
+  }
+}
+
+.active {
+  border: 1px solid $gray-lighter;
+}

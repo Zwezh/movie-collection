@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/reset";
+@import "./assets/styles/fonts";
+@import "./assets/styles/colors";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+}
+
+input,
+select {
+  font-family: Roboto, sans-serif;
+  font-size: 1.25em;
+  color: $gray-light;
+  border: 1px solid $gray-lighter;
+  border-radius: none;
+  padding: 0 10px;
+  height: 2.15rem;
+  line-height: 2.15rem;
+  box-sizing: border-box;
+  font-weight: 100;
+
+}
+
+a {
+  cursor: pointer;
+  color: $primary;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease-out;
+
+  &:hover {
+    color: $info;
+    transition: color 0.3s ease-out;
+  }
+}
+
+.icon {
+  cursor: pointer;
+  color: $primary;
+  transition: all 0.3s ease-out;
+  font-size: 1.5em;
+
+  &:hover {
+    color: $info;
+    transition: all 0.3s ease-out;
+  }
+}
+
+.text--header {
+  font-weight: 700;
+}
+
+.text--title {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+.text--subtitle {
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.text--description {
+  font-size: 1.25em;
+  font-weight: 100;
+  color: $gray-light;
+}
+
+.text--label {
+  color: $gray;
+  height: 1em;
+  line-height: 1em;
+}
+
+.text--value {
+  color: $gray-light;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+.text--overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text--raiting {
+  color: $danger;
+  font-weight: 500;
+}

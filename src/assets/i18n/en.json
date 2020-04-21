@@ -1,0 +1,29 @@
+{
+    "appName": "My Movie Collection",
+    "languages": {
+        "english": "En",
+        "russian": "Ru"
+    },
+    "movie": {
+        "russianName": "Russian name",
+        "originalName": "Name",
+        "raiting": "Raiting",
+        "actors": "Actors",
+        "country": "Country",
+        "director": "Director",
+        "duration": "Duration",
+        "genre": "Genre",
+        "more": "Additional",
+        "quality": "Quality",
+        "translation": "Translation",
+        "year": "Year",
+        "logo": "Poster"
+    },
+    "back": "Return to list",
+    "emptyFilter": "All fields",
+    "defaultOrder": "Default",
+    "by": "by",
+    "search": "Search",
+    "order": "Order",
+    "hasNoMovies": "Has no movies"
+}

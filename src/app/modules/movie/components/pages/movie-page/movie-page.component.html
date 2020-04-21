@@ -1,0 +1,20 @@
+<div class="movie-list-wrpapper"
+     *ngIf="movieList$ | async as movieList; else hasNoItems;">
+    <movie-actions #actions></movie-actions>
+    <cdk-virtual-scroll-viewport class="movie-list-container"
+                                 [itemSize]="81">
+        <div class="movie-item"
+             *cdkVirtualFor="let movie of movieList | movieFilter: actions.search: actions.filter | movieOrderBy: 'asc': actions.order">
+            <movie-item [movie]="movie"
+                        (openViewDetails)="onOpenMovieViewMode()"></movie-item>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>
+<ng-template #hasNoItems>
+    <div class="has-no-items">
+        <p class="content text--description"
+           title="{{'hasNoMovies' | translate}}">
+            {{'hasNoMovies' | translate}}
+        </p>
+    </div>
+</ng-template>

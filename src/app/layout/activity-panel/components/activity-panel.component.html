@@ -1,0 +1,11 @@
+<div *ngIf="open"
+     class="activity-panel">
+    <m-header>
+        <div class="ativity-header">
+            <span>{{title}}</span>
+            <i class="las la-times icon close-icon"></i>
+
+        </div>
+    </m-header>
+    <activity-content-host [innerComponent]="innerComponent"></activity-content-host>
+</div>

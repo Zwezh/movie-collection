@@ -1,7 +1,13 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
+    "paths": {
+      "@appComponents/*": ["app/common/components/*"],
+      "@appServices": ["app/common/services"],
+      "@appShared": ["app/common/shared"],
+      "@appLayouts/*": ["app/layout/*"]
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -16,6 +22,7 @@
       "dom"
     ]
   },
+
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true

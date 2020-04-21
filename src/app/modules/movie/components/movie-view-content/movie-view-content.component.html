@@ -1,0 +1,66 @@
+<div class="movie-view">
+    <figure class="movie-view__side">
+        <img src="https://via.placeholder.com/350x450"
+             [alt]="'movie.logo' | translate" />
+        <figcaption class="movie-view__raiting text--title text--raiting"
+                    [title]="movie.raiting">{{movie.raiting}}</figcaption>
+    </figure>
+    <main class="movie-view__main">
+        <div class="movie-view__header text--title text-overflow">
+            <span class="movie-view__name"
+                  title="{{movie.russianName}}">{{movie.russianName}}</span>
+            <span class="movie-view__name"
+                  title="{{movie.originalName}}">{{movie.originalName}}</span>
+        </div>
+        <div class="movie-view__actions">
+            <a [routerLink]="['/movie']"
+               title="{{'back' | translate}}"><i class="las la-arrow-alt-circle-left"></i></a>
+
+        </div>
+        <m-list-item fieldClass="movie-view__field"
+                     labelClass="movie-view__label text-description"
+                     valueClass="text-description"
+                     [label]="'movie.year' | translate"
+                     [value]="movie.year"></m-list-item>
+        <m-list-item fieldClass="movie-view__field"
+                     labelClass="movie-view__label text-description"
+                     valueClass="text-description"
+                     [label]="'movie.country' | translate"
+                     [value]="movie.country"></m-list-item>
+        <m-list-item fieldClass="movie-view__field"
+                     labelClass="movie-view__label text-description"
+                     valueClass="text-description"
+                     [label]="'movie.duration' | translate"
+                     [value]="movie.duration"></m-list-item>
+        <m-list-item fieldClass="movie-view__field"
+                     labelClass="movie-view__label text-description"
+                     valueClass="text-description"
+                     [label]="'movie.genre' | translate"
+                     [value]="movie.genre"></m-list-item>
+        <m-list-item fieldClass="movie-view__field"
+                     labelClass="movie-view__label text-description"
+                     valueClass="text-description"
+                     [label]="'movie.director' | translate"
+                     [value]="movie.director"></m-list-item>
+        <m-list-item fieldClass="movie-view__field"
+                     labelClass="movie-view__label text-description"
+                     valueClass="text-description"
+                     [label]="'movie.actors' | translate"
+                     [value]="movie.actors"></m-list-item>
+        <m-list-item fieldClass="movie-view__field"
+                     labelClass="movie-view__label text-description"
+                     valueClass="text-description"
+                     [label]="'movie.translation' | translate"
+                     [value]="movie.translation"></m-list-item>
+        <m-list-item fieldClass="movie-view__field"
+                     labelClass="movie-view__label text-description"
+                     valueClass="text-description"
+                     [label]="'movie.quality' | translate"
+                     [value]="movie.quality"></m-list-item>
+        <m-list-item fieldClass="movie-view__field"
+                     labelClass="movie-view__label text-description"
+                     valueClass="text-description"
+                     [label]="'movie.more' | translate"
+                     [value]="movie.more"></m-list-item>
+    </main>
+</div>

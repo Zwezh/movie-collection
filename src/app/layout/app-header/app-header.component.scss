@@ -1,0 +1,12 @@
+.app-header {
+  position: relative;
+
+  .language-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 10px;
+    display: flex;
+    align-items: center;
+  }
+}

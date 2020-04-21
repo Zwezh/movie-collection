@@ -1,0 +1,46 @@
+@import "./../../../../../assets/styles/colors";
+
+.actions-container {
+  height: 45px;
+  border-bottom: 1px solid $gray-lighter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $gray-lightest;
+}
+
+.action-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-content + .action-content {
+    margin-left: 15px;
+}
+
+.action-title {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  height: 2.15rem;
+  padding: 5px;
+  border: 1px solid $gray-lighter;
+border-right: none;
+}
+
+.field {
+  width: 250px;
+}
+
+.field+.field {
+  border-left: none;
+}
+
+.order-label {
+  display: inline-block;
+  height: 100%;
+  border-bottom: 1px solid $gray-lighter;
+
+}
