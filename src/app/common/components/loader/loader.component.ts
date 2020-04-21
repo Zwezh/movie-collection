@@ -18,7 +18,7 @@ import { LoaderService } from './services/loader.service';
 export class LoaderComponent implements OnInit, OnDestroy {
     private _loadingSubscription: Subscription;
 
-    public loading: boolean;
+    loading: boolean;
 
     constructor(
         private _changeDetector: ChangeDetectorRef,

@@ -30,7 +30,6 @@ export class MovieViewPageComponent implements OnInit, OnDestroy {
         private _modelService: MovieModelService,
         private _activatedRoute: ActivatedRoute) {
         this._destroy$ = new Subject();
-        this.movie = _modelService.selectedMovie;
         this.movie$ = _modelService.selectedMovie$;
     }
 

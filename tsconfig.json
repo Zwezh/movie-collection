@@ -6,6 +6,7 @@
       "@appComponents/*": ["app/common/components/*"],
       "@appServices": ["app/common/services"],
       "@appShared": ["app/common/shared"],
+      "@appSharedModule": ["app/common/shared.module.ts"],
       "@appLayouts/*": ["app/layout/*"]
     },
     "outDir": "./dist/out-tsc",

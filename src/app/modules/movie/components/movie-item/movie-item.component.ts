@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter, Pipe } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter, Pipe, ViewEncapsulation } from '@angular/core';
 
 import { IMovie } from '../../interfaces';
 
@@ -6,6 +6,7 @@ import { IMovie } from '../../interfaces';
     selector: 'movie-item',
     templateUrl: './movie-item.component.html',
     styleUrls: ['./movie-item.component.scss'],
+    encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MovieItemComponent {

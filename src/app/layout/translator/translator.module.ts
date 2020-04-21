@@ -3,9 +3,7 @@ import { NgModule } from '@angular/core';
 import { HeaderModule } from '@appComponents/header';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { TranslatorModule } from '../translator/translator.module';
-
-import { AppHeaderComponent } from './app-header.component';
+import { TranslatorComponent } from './translator.component';
 
 
 
@@ -13,10 +11,9 @@ import { AppHeaderComponent } from './app-header.component';
     imports: [
         CommonModule,
         TranslateModule,
-        TranslatorModule,
         HeaderModule
     ],
-    declarations: [AppHeaderComponent],
-    exports: [AppHeaderComponent]
+    declarations: [TranslatorComponent],
+    exports: [TranslatorComponent]
 })
-export class AppHeaderModule { }
+export class TranslatorModule { }

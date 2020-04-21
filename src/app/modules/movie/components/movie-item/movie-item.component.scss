@@ -1,18 +1,18 @@
 @import "./../../../../../assets/styles/colors";
 
-.movie-container {
+.movie-item {
   border: 1px solid $gray-lighter;
   padding: 10px;
   border-radius: 2px;
   background: $white;
 
-  .movie-header {
+  &__header {
     padding-bottom: 5px;
     margin-bottom: 5px;
     border-bottom: 1px solid $gray-lighter;
   }
 
-  .movie-name+.movie-name {
+  &__name+&__name {
     position: relative;
     margin-left: 20px;
 
@@ -23,12 +23,21 @@
     }
   }
 
-  .movie-body {
+  &__body {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .movie-block {
+  &__block {
     width: 33%;
+  }
+
+  &__field {
+    line-height: 1.25rem;
+    height: 1.25rem;
+  }
+
+  &__label {
+    min-width: 75px;
   }
 }

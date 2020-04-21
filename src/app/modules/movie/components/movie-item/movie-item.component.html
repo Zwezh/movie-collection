@@ -1,30 +1,41 @@
-<div class="movie-container"
-     (click)="openViewDetails()">
-    <div class="movie-header text--description">
+<div class="movie-item">
+    <div class="movie-item__header text--description">
         <a [routerLink]="[ movie._id ]">
-            <span class="movie-name"
+            <span class="movie-item__name"
                   title="{{movie.russianName}}">{{movie.russianName}}</span>
-            <span class="movie-name"
+            <span class="movie-item__name"
                   title="{{movie.originalName}}">{{movie.originalName}}</span>
         </a>
     </div>
-    <div class="movie-body">
-        <div class="movie-block">
-            <m-list-item [label]="'movie.raiting' | translate"
+    <div class="movie-item__body">
+        <div class="movie-item__block">
+            <m-list-item fieldClass="movie-item__field"
+                         labelClass="movie-item__label"
+                         [label]="'movie.raiting' | translate"
                          [value]="movie.raiting"></m-list-item>
-            <m-list-item [label]="'movie.country' | translate"
+            <m-list-item fieldClass="movie-item__field"
+                         labelClass="movie-item__label"
+                         [label]="'movie.country' | translate"
                          [value]="movie.country"></m-list-item>
         </div>
-        <div class="movie-block">
-            <m-list-item [label]="'movie.year' | translate"
+        <div class="movie-item__block">
+            <m-list-item fieldClass="movie-item__field"
+                         labelClass="movie-item__label"
+                         [label]="'movie.year' | translate"
                          [value]="movie.year"></m-list-item>
-            <m-list-item [label]="'movie.genre' | translate"
+            <m-list-item fieldClass="movie-item__field"
+                         labelClass="movie-item__label"
+                         [label]="'movie.genre' | translate"
                          [value]="movie.genre"></m-list-item>
         </div>
-        <div class="movie-block">
-            <m-list-item [label]="'movie.duration' | translate"
+        <div class="movie-item__block">
+            <m-list-item fieldClass="movie-item__field"
+                         labelClass="movie-item__label"
+                         [label]="'movie.duration' | translate"
                          [value]="movie.duration"></m-list-item>
-            <m-list-item [label]="'movie.translation' | translate"
+            <m-list-item fieldClass="movie-item__field"
+                         labelClass="movie-item__label"
+                         [label]="'movie.translation' | translate"
                          [value]="movie.translation"></m-list-item>
         </div>
     </div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ListItemModule } from '@appComponents/list-item';
+import { SharedModule } from '@appSharedModule';
 import { TranslateModule } from '@ngx-translate/core';
 
 import {
@@ -34,9 +35,7 @@ const COMPONENTS = [
 
 @NgModule({
     imports: [
-        FormsModule,
-        TranslateModule,
-        CommonModule,
+        SharedModule,
         MovieRoutingModule,
         ScrollingModule,
         ListItemModule
