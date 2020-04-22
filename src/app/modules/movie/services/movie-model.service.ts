@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Pipe } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
@@ -21,6 +21,10 @@ export class MovieModelService {
         return this._selectedMovie$.asObservable();
     }
     constructor(private _apiService: MovieApiService) {
+this.setInitalState();
+    }
+
+    setInitalState(): void {
         this._movieList$ = new BehaviorSubject<Array<IMovie>>(initialMovieState.movieCollection);
         this._selectedMovie$ = new BehaviorSubject<IMovie>(initialMovieState.movie);
     }

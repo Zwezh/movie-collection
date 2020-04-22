@@ -4,7 +4,8 @@
     <cdk-virtual-scroll-viewport class="movie-list-container"
                                  [itemSize]="81">
         <div class="movie-item"
-             *cdkVirtualFor="let movie of movieList | movieFilter: actions.search: actions.filter | movieOrderBy: 'asc': actions.order">
+             *cdkVirtualFor="let movie of movieList | movieFilter: actions.search: actions.filter | movieOrderBy: 'asc': actions.order"
+             [@fadeInContentByOpacity]>
             <movie-item [movie]="movie"
                         (openViewDetails)="onOpenMovieViewMode()"></movie-item>
         </div>

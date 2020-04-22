@@ -10,11 +10,13 @@ import { takeUntil } from 'rxjs/operators';
 
 import { IMovie } from '../../../interfaces';
 import { MovieModelService } from '../../../services';
+import { FADE_IN_CONTENT_BY_OPACITY } from 'app/common/constants';
 
 @Component({
     selector: 'movie-page',
     templateUrl: './movie-page.component.html',
     styleUrls: ['./movie-page.component.scss'],
+    animations: [FADE_IN_CONTENT_BY_OPACITY],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MoviePageComponent implements OnInit, OnDestroy {

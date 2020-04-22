@@ -1,6 +1,7 @@
 <m-loader></m-loader>
 <m-app-header></m-app-header>
-<main class="main-content">
+<main class="main-content"
+      [@routerTransition]="getState(o)">
     <m-activity-panel></m-activity-panel>
-    <router-outlet></router-outlet>
+    <router-outlet #o="outlet"></router-outlet>
 </main>
