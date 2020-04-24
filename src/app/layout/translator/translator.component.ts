@@ -14,7 +14,7 @@ import { BehaviorSubject, Subscription } from 'rxjs';
 import LanguagesConstants from './constants/translator.constants';
 
 @Component({
-    selector: 'm-translator',
+    selector: 'mc-translator',
     templateUrl: './translator.component.html',
     styleUrls: ['./translator.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

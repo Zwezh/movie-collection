@@ -10,7 +10,7 @@
 } from '@angular/core'
 
 @Component({
-    selector: 'activity-content-host',
+    selector: 'mc-activity-content-host',
     template: '<ng-template #dynamicComponent></ng-template>'
 
 })

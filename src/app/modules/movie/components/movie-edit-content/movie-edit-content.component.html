@@ -1,0 +1,77 @@
+<div class="movie-view">
+    <figure class="movie-view__side">
+        <img class="movie-view__poster"
+             [src]="imageUrl"
+             [alt]="'movie.logo' | translate" />
+        <figcaption class="movie-view__raiting text--biggest text--raiting"
+                    [title]="movie.raiting">
+            <div class="movie-view__stars">
+                <ng-container *ngFor="let item of raitingStarCollection">
+                    <i class="la-star"
+                       [ngClass]="item"></i>
+                </ng-container>
+            </div>
+            {{movie.raiting}}
+        </figcaption>
+    </figure>
+    <main class="movie-view__main">
+        <div class="movie-view__header">
+            <div class="movie-view__title text--title text--overflow">
+                <span class="movie-view__name"
+                      title="{{movie.russianName}}">{{movie.russianName}}</span>
+                <span class="movie-view__name"
+                      title="{{movie.originalName}}">{{movie.originalName}}</span>
+            </div>
+            <div class="movie-view__actions text--description">
+                <a [routerLink]="['/movie']"
+                   class="text--title"
+                   title="{{'back' | translate}}"><i class="las la-arrow-alt-circle-left"></i></a>
+            </div>
+        </div>
+        <mc-list-item fieldClass="movie-view__field"
+                      labelClass="movie-view__label text-description"
+                      valueClass="text-description"
+                      [label]="'movie.year' | translate"
+                      [value]="movie.year"></mc-list-item>
+        <mc-list-item fieldClass="movie-view__field"
+                      labelClass="movie-view__label text-description"
+                      valueClass="text-description"
+                      [label]="'movie.country' | translate"
+                      [value]="movie.country"></mc-list-item>
+        <mc-list-item fieldClass="movie-view__field"
+                      labelClass="movie-view__label text-description"
+                      valueClass="text-description"
+                      [label]="'movie.duration' | translate"
+                      [value]="movie.duration"></mc-list-item>
+        <mc-list-item fieldClass="movie-view__field"
+                      labelClass="movie-view__label text-description"
+                      valueClass="text-description"
+                      [label]="'movie.genre' | translate"
+                      [value]="movie.genre"></mc-list-item>
+        <mc-list-item fieldClass="movie-view__field"
+                      labelClass="movie-view__label text-description"
+                      valueClass="text-description"
+                      [label]="'movie.director' | translate"
+                      [value]="movie.director"></mc-list-item>
+        <mc-list-item fieldClass="movie-view__field"
+                      labelClass="movie-view__label text-description"
+                      valueClass="text-description"
+                      [label]="'movie.actors' | translate"
+                      [value]="movie.actors"></mc-list-item>
+        <mc-list-item fieldClass="movie-view__field"
+                      labelClass="movie-view__label text-description"
+                      valueClass="text-description"
+                      [label]="'movie.translation' | translate"
+                      [value]="movie.translation"></mc-list-item>
+        <mc-list-item fieldClass="movie-view__field"
+                      labelClass="movie-view__label text-description"
+                      valueClass="text-description"
+                      [label]="'movie.quality' | translate"
+                      [value]="movie.quality"></mc-list-item>
+        <mc-list-item fieldClass="movie-view__field"
+                      labelClass="movie-view__label text-description"
+                      valueClass="text-description"
+                      [label]="'movie.more' | translate"
+                      [value]="movie.more"></mc-list-item>
+    </main>
+</div>

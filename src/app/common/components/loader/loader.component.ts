@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 import { LoaderService } from './services/loader.service';
 
 @Component({
-    selector: 'm-loader',
+    selector: 'mc-loader',
     templateUrl: './loader.component.html',
     styleUrls: ['./loader.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

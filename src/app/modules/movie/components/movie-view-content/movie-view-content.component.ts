@@ -9,7 +9,7 @@ import { MovieApiConstants } from '../../constants';
 import { IMovie } from '../../interfaces';
 
 @Component({
-    selector: 'movie-view-content',
+    selector: 'mc-movie-view-content',
     templateUrl: './movie-view-content.component.html',
     styleUrls: ['./movie-view-content.component.scss'],
     encapsulation: ViewEncapsulation.None,

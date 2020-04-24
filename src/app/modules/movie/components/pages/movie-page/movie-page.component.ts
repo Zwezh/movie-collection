@@ -13,7 +13,7 @@ import { MovieModelService } from '../../../services';
 import { FADE_IN_CONTENT_BY_OPACITY } from 'app/common/constants';
 
 @Component({
-    selector: 'movie-page',
+    selector: 'mc-movie-page',
     templateUrl: './movie-page.component.html',
     styleUrls: ['./movie-page.component.scss'],
     animations: [FADE_IN_CONTENT_BY_OPACITY],

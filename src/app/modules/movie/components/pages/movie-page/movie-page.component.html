@@ -1,13 +1,13 @@
 <div class="movie-list-wrpapper"
      *ngIf="movieList$ | async as movieList; else hasNoItems;">
-    <movie-actions #actions></movie-actions>
+    <mc-movie-actions #actions></mc-movie-actions>
     <cdk-virtual-scroll-viewport class="movie-list-container"
                                  [itemSize]="81">
         <div class="movie-item"
              *cdkVirtualFor="let movie of movieList | movieFilter: actions.search: actions.filter | movieOrderBy: 'asc': actions.order"
              [@fadeInContentByOpacity]>
-            <movie-item [movie]="movie"
-                        (openViewDetails)="onOpenMovieViewMode()"></movie-item>
+            <mc-movie-item [movie]="movie"
+                        (openViewDetails)="onOpenMovieViewMode()"></mc-movie-item>
         </div>
     </cdk-virtual-scroll-viewport>
 </div>

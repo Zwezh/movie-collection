@@ -1,0 +1,10 @@
+<p class="edit-field"
+   [ngClass]="fieldClass">
+    <label [ngClass]="labelClass"
+           class="text--label"
+           title="{{label}}">{{label}}</label>
+    <input [ngClass]="valueClass"
+           type="text"
+           [(ngModel)]="value"
+           [disabled]="isDisable">
+</p>

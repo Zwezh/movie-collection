@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 
 @Component({
-    selector: 'm-list-item',
+    selector: 'mc-list-item',
     templateUrl: './list-item.component.html',
     styleUrls: ['./list-item.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

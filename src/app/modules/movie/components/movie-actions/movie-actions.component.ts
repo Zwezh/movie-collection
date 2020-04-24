@@ -6,7 +6,7 @@ import {
 import { MovieActionsConstants } from '../../constants';
 
 @Component({
-    selector: 'movie-actions',
+    selector: 'mc-movie-actions',
     templateUrl: './movie-actions.component.html',
     styleUrls: ['./movie-actions.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

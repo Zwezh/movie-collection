@@ -13,7 +13,7 @@ import {
 
 @Component({
     styleUrls: ['./activity-panel.component.scss'],
-    selector: 'm-activity-panel',
+    selector: 'mc-activity-panel',
     templateUrl: './activity-panel.component.html',
     changeDetection:ChangeDetectionStrategy.OnPush
 })

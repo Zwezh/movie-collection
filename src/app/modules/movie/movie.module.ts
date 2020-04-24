@@ -1,13 +1,13 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { EditFieldModule } from '@appComponents/edit-field';
 import { ListItemModule } from '@appComponents/list-item';
 import { SharedModule } from '@appSharedModule';
-import { TranslateModule } from '@ngx-translate/core';
 
 import {
     MovieActionsComponent,
+    MovieEditContentComponent,
+    MovieEditPageComponent,
     MovieItemComponent,
     MoviePageComponent,
     MovieViewContentComponent,
@@ -27,8 +27,10 @@ const COMPONENTS = [
     MovieActionsComponent,
     MovieItemComponent,
     MoviePageComponent,
+    MovieEditPageComponent,
     MovieViewPageComponent,
     MovieViewContentComponent,
+    MovieEditContentComponent,
     MovieFilterPipe,
     MovieOrderByPipe
 ]
@@ -38,7 +40,8 @@ const COMPONENTS = [
         SharedModule,
         MovieRoutingModule,
         ScrollingModule,
-        ListItemModule
+        ListItemModule,
+        EditFieldModule
     ],
     declarations: [COMPONENTS],
     providers: [

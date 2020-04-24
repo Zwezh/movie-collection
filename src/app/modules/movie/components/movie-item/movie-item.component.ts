@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter, Pipe, 
 import { IMovie } from '../../interfaces';
 
 @Component({
-    selector: 'movie-item',
+    selector: 'mc-movie-item',
     templateUrl: './movie-item.component.html',
     styleUrls: ['./movie-item.component.scss'],
     encapsulation: ViewEncapsulation.None,

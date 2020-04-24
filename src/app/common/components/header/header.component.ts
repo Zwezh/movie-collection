@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 
 @Component({
-    selector: 'm-header',
+    selector: 'mc-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

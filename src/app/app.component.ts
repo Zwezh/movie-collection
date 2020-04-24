@@ -18,7 +18,7 @@ const routerTransition = trigger('routerTransition', [
     ])
 ]);
 @Component({
-    selector: 'app-root',
+    selector: 'mc-app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     animations: [routerTransition]

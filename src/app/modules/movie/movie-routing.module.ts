@@ -5,6 +5,7 @@ import {
 } from '@angular/router';
 
 import {
+    MovieEditPageComponent,
     MoviePageComponent,
     MovieViewPageComponent
 } from './components';
@@ -18,6 +19,10 @@ const routes: Routes = [
     {
         path: ':movieGlobalKey',
         component: MovieViewPageComponent
+    },
+    {
+        path: 'edit/:movieGlobalKey',
+        component: MovieEditPageComponent
     }
 ];
 
