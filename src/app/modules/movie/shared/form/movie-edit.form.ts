@@ -84,7 +84,7 @@ export class MovieEditForm extends FormGroup {
                 year: movie.year
             },
             {
-                emitEvent: true
+                emitEvent: false
             }
         );
     }

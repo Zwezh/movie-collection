@@ -34,7 +34,6 @@ export class EditFieldComponent implements ControlValueAccessor {
     set value(val) {
         this._value = val;
         this._changeDetector.detectChanges();
-        this.onChange(this._value);
     }
     @Input() label: string;
     @Input() fieldClass: string;
@@ -51,8 +50,9 @@ export class EditFieldComponent implements ControlValueAccessor {
         this.onChange = fn;
     }
 
-    // tslint:disable-next-line: no-empty
-    registerOnTouched(fn: any): void { }
+    registerOnTouched(fn: () => {}): void {
+        this.onTouched = fn;
+    }
 
     setDisabledState(isDisabled: boolean): void {
         this.isDisable = isDisabled;
@@ -62,7 +62,14 @@ export class EditFieldComponent implements ControlValueAccessor {
         this.value = value;
     }
 
+    onChangeValue(event: any): void {
+        this.onChange(event.target.value);
+        this.onTouched();
+    }
+
     // tslint:disable-next-line: no-empty
-    private onChange = (value: any) => { }
+    private onChange = (value: any) => { };
+    // tslint:disable-next-line: no-empty
+    private onTouched = () => { };
 
 }

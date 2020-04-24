@@ -20,8 +20,11 @@ export class MovieModelService {
     get selectedMovie$(): Observable<IMovie> {
         return this._selectedMovie$.asObservable();
     }
+    get selectedMovie(): IMovie {
+        return this._selectedMovie$.getValue();
+    }
     constructor(private _apiService: MovieApiService) {
-this.setInitalState();
+        this.setInitalState();
     }
 
     setInitalState(): void {
@@ -37,6 +40,8 @@ this.setInitalState();
 
     getSelectedMovie(movieGlobalKey: string): Observable<any> {
         return this._apiService.getMovie(movieGlobalKey).pipe(
-            tap((response: MovieDto) => this._selectedMovie$.next(response)));
+            tap((response: MovieDto) => {
+                this._selectedMovie$.next(response);
+            }));
     }
 }

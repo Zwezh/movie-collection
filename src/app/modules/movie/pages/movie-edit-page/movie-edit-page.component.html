@@ -1,8 +1,10 @@
 <div class="movie-edit-page">
     <div class="movie-edit-page__container">
         <div class="movie-edit-page__actions">
-            <button class="btn btn--primary movie-edit-page__action">Save</button>
-            <button class="btn btn--secondary movie-edit-page__action">Cancel</button>
+            <button class="btn btn--primary movie-edit-page__action"
+                    [disabled]="isDisable">Save</button>
+            <button class="btn btn--secondary movie-edit-page__action"
+                    (click)="onCancel()">Cancel</button>
         </div>
         <mc-movie-edit-content [movie]="movie$ | async"
                                [form]="form"></mc-movie-edit-content>

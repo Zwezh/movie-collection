@@ -5,6 +5,7 @@
            title="{{label}}">{{label}}</label>
     <input [ngClass]="valueClass"
            type="text"
-           [value]="value"
+           [value]="value"  
+           (input)="onChangeValue($event)"
            [disabled]="isDisable">
 </p>
