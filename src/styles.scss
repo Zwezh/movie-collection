@@ -13,18 +13,41 @@ body {
 }
 
 input,
-select {
+select,
+button {
   font-family: Roboto, sans-serif;
   font-size: 1.25em;
   color: $gray-light;
   border: 1px solid $gray-lighter;
-  border-radius: none;
   padding: 0 10px;
   height: 2.15rem;
   line-height: 2.15rem;
   box-sizing: border-box;
   font-weight: 100;
 
+  &:focus {
+    border: 1px solid $gray-light;
+  }
+}
+
+.btn {
+  padding: 0 20px;
+  transition: opacity 0.2s ease-in-out;
+
+  &--primary {
+    background-color: $info;
+    color: $white;
+  }
+
+  &--secondary {
+    background-color: $white;
+    color: $info;
+    box-shadow: inset 0px 0px 0px 1px $info;
+  }
+  &:hover {
+      transition: opacity 0.2s ease-in-out;
+      opacity: 0.8;
+  }
 }
 
 a {
@@ -97,4 +120,17 @@ a {
 .text--raiting {
   color: $danger;
   font-weight: 500;
+}
+
+.label--input {
+  font-family: Roboto, sans-serif;
+  font-size: 1.25em;
+  color: $gray-light;
+  border: 1px solid $gray-lighter;
+  border-right: none;
+  padding: 0 10px;
+  height: 2.16rem;
+  line-height: 2.16rem;
+  box-sizing: border-box;
+  font-weight: 100;
 }

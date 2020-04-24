@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
+      "@appConstants": ["app/common/constants"],
       "@appComponents/*": ["app/common/components/*"],
       "@appServices": ["app/common/services"],
       "@appShared": ["app/common/shared"],

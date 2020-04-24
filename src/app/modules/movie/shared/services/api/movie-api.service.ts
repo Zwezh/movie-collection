@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { ApiService } from '@appServices';
 import { Observable } from 'rxjs';
 
-import { MovieApiConstants } from '../../constants';
+import { MovieApiConstants } from '../../../constants';
 import { MovieDto } from '../../dto';
 
 @Injectable()

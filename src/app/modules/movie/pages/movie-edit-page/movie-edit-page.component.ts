@@ -2,27 +2,28 @@ import {
     ChangeDetectionStrategy,
     Component,
     OnDestroy,
-    OnInit
+    OnInit,
+    ViewEncapsulation
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MovieModelService } from 'app/modules/movie/services';
-import {
-    Observable,
-    Subject
-} from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { IMovie } from '../../../interfaces';
+import { MovieEditForm } from '../../shared/form';
+import { IMovie } from '../../shared/interfaces';
+import { MovieModelService } from '../../shared/services';
 
 @Component({
-    selector: 'mc-movie-view-page',
-    templateUrl: './movie-view-page.component.html',
-    styleUrls: ['./movie-view-page.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'mc-movie-edit-page',
+    templateUrl: './movie-edit-page.component.html',
+    styleUrls: ['./movie-edit-page.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None
 })
-export class MovieViewPageComponent implements OnInit, OnDestroy {
+export class MovieEditPageComponent implements OnInit, OnDestroy {
 
     private _destroy$: Subject<void>;
+    private form: MovieEditForm;
     movie$: Observable<IMovie>;
 
     constructor(
@@ -30,11 +31,15 @@ export class MovieViewPageComponent implements OnInit, OnDestroy {
         private _activatedRoute: ActivatedRoute) {
         this._destroy$ = new Subject();
         this.movie$ = _modelService.selectedMovie$;
+        this.form = new MovieEditForm();
     }
 
     ngOnInit() {
         const movieGlobalKey = this._activatedRoute.snapshot.params.movieGlobalKey;
         this._modelService.getSelectedMovie(movieGlobalKey).pipe(takeUntil(this._destroy$)).subscribe();
+        this.movie$.subscribe((movie: IMovie) => {
+            this.form.updateFormValues(movie);
+        })
     }
 
     ngOnDestroy(): void {

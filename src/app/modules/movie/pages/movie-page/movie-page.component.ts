@@ -5,12 +5,12 @@ import {
     OnDestroy,
     OnInit
 } from '@angular/core';
-import { Subject, Observable } from 'rxjs';
+import { FADE_IN_CONTENT_BY_OPACITY } from '@appConstants';
+import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { IMovie } from '../../../interfaces';
-import { MovieModelService } from '../../../services';
-import { FADE_IN_CONTENT_BY_OPACITY } from 'app/common/constants';
+import { IMovie } from '../../shared/interfaces';
+import { MovieModelService } from '../../shared/services';
 
 @Component({
     selector: 'mc-movie-page',
@@ -26,7 +26,7 @@ export class MoviePageComponent implements OnInit, OnDestroy {
     search: string;
     movieList$: Observable<Array<IMovie>>;
     isHasItems: boolean;
-    
+
     constructor(
         private _cd: ChangeDetectorRef,
         private _movieService: MovieModelService

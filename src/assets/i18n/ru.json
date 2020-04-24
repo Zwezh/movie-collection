@@ -5,6 +5,7 @@
         "russian": "Рус"
     },
     "movie": {
+        "id": "ID кинопоиск",
         "russianName": "Название",
         "originalName": "Оригинальное название",
         "raiting":"Рейтинг",

@@ -5,23 +5,26 @@ import { ListItemModule } from '@appComponents/list-item';
 import { SharedModule } from '@appSharedModule';
 
 import {
-    MovieActionsComponent,
-    MovieEditContentComponent,
-    MovieEditPageComponent,
-    MovieItemComponent,
-    MoviePageComponent,
-    MovieViewContentComponent,
-    MovieViewPageComponent
-} from './components';
-import { MovieRoutingModule } from './movie-routing.module';
-import {
     MovieFilterPipe,
     MovieOrderByPipe
-} from './pipes';
+} from './shared/pipes';
 import {
     MovieApiService,
     MovieModelService
-} from './services';
+} from './shared/services';
+
+import {
+    MovieActionsComponent,
+    MovieEditContentComponent,
+    MovieItemComponent,
+    MovieViewContentComponent,
+} from './components';
+import { MovieRoutingModule } from './movie-routing.module';
+import {
+    MovieEditPageComponent,
+    MoviePageComponent,
+    MovieViewPageComponent
+} from './pages';
 
 const COMPONENTS = [
     MovieActionsComponent,

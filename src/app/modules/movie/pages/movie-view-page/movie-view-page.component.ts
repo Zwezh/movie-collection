@@ -2,23 +2,25 @@ import {
     ChangeDetectionStrategy,
     Component,
     OnDestroy,
-    OnInit,
-    ViewEncapsulation
+    OnInit
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IMovie } from 'app/modules/movie/interfaces';
-import { MovieModelService } from 'app/modules/movie/services';
-import { Observable, Subject } from 'rxjs';
+import {
+    Observable,
+    Subject
+} from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
+import { IMovie } from '../../shared/interfaces';
+import { MovieModelService } from '../../shared/services';
+
 @Component({
-    selector: 'mc-movie-edit-page',
-    templateUrl: './movie-edit-page.component.html',
-    styleUrls: ['./movie-edit-page.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    encapsulation: ViewEncapsulation.None
+    selector: 'mc-movie-view-page',
+    templateUrl: './movie-view-page.component.html',
+    styleUrls: ['./movie-view-page.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MovieEditPageComponent implements OnInit, OnDestroy {
+export class MovieViewPageComponent implements OnInit, OnDestroy {
 
     private _destroy$: Subject<void>;
     movie$: Observable<IMovie>;

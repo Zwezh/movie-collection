@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 
 import { MovieApiConstants } from '../../constants';
-import { IMovie } from '../../interfaces';
+import { IMovie } from '../../shared/interfaces';
 
 @Component({
     selector: 'mc-movie-view-content',

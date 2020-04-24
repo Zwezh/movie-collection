@@ -8,7 +8,7 @@ import {
     MovieEditPageComponent,
     MoviePageComponent,
     MovieViewPageComponent
-} from './components';
+} from './pages';
 
 const routes: Routes = [
     {

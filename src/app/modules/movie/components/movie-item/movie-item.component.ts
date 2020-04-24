@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter, Pipe, ViewEncapsulation } from '@angular/core';
 
-import { IMovie } from '../../interfaces';
+import { IMovie } from '../../shared/interfaces';
 
 @Component({
     selector: 'mc-movie-item',

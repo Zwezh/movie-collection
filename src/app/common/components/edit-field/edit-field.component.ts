@@ -1,5 +1,6 @@
 import {
     ChangeDetectionStrategy,
+    ChangeDetectorRef,
     Component,
     forwardRef,
     Input,
@@ -32,6 +33,7 @@ export class EditFieldComponent implements ControlValueAccessor {
     @Input()
     set value(val) {
         this._value = val;
+        this._changeDetector.detectChanges();
         this.onChange(this._value);
     }
     @Input() label: string;
@@ -39,7 +41,11 @@ export class EditFieldComponent implements ControlValueAccessor {
     @Input() labelClass: string;
     @Input() valueClass: string;
 
-    isDisable = false;
+    isDisable: boolean;
+
+    constructor(private _changeDetector: ChangeDetectorRef) {
+        this.isDisable = false;
+    }
 
     registerOnChange(fn: any): void {
         this.onChange = fn;
