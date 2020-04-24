@@ -38,7 +38,6 @@ export class MovieViewPageComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        this._modelService.setInitalState();
         this._destroy$.next();
         this._destroy$.complete();
     }

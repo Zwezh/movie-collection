@@ -1,4 +1,5 @@
 export class MovieDto {
+    _id: string;
     actors: string;
     country: string;
     director: string;

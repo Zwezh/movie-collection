@@ -23,9 +23,7 @@ export class MovieModelService {
     get selectedMovie(): IMovie {
         return this._selectedMovie$.getValue();
     }
-    constructor(private _apiService: MovieApiService) {
-        this.setInitalState();
-    }
+    constructor(private _apiService: MovieApiService) { }
 
     setInitalState(): void {
         this._movieList$ = new BehaviorSubject<Array<IMovie>>(initialMovieState.movieCollection);
@@ -39,9 +37,13 @@ export class MovieModelService {
     }
 
     getSelectedMovie(movieGlobalKey: string): Observable<any> {
-        return this._apiService.getMovie(movieGlobalKey).pipe(
-            tap((response: MovieDto) => {
-                this._selectedMovie$.next(response);
-            }));
+        if (this.selectedMovie._id === movieGlobalKey) {
+            return this.selectedMovie$;
+        } else {
+            return this._apiService.getMovie(movieGlobalKey).pipe(
+                tap((response: MovieDto) => {
+                    this._selectedMovie$.next(response);
+                }));
+        }
     }
 }

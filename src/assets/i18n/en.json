@@ -21,10 +21,13 @@
         "logo": "Poster"
     },
     "back": "Return to list",
+    "editMovie": "Edit movie",
     "emptyFilter": "All fields",
     "defaultOrder": "Default",
     "by": "by",
     "search": "Search",
     "order": "Order",
-    "hasNoMovies": "Has no movies"
+    "hasNoMovies": "Has no movies",
+    "save": "Save",
+    "cancel":"Cancel"
 }

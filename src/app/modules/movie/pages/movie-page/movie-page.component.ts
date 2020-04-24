@@ -1,6 +1,5 @@
 import {
     ChangeDetectionStrategy,
-    ChangeDetectorRef,
     Component,
     OnDestroy,
     OnInit
@@ -28,25 +27,21 @@ export class MoviePageComponent implements OnInit, OnDestroy {
     isHasItems: boolean;
 
     constructor(
-        private _cd: ChangeDetectorRef,
         private _movieService: MovieModelService
     ) {
         this.search = '';
+        this._movieService.setInitalState();
         this.movieList$ = _movieService.movieList;
         this._destroy$ = new Subject();
         this.isHasItems = false
     }
 
     ngOnInit(): void {
-
         this._movieService.getMovieCollection().pipe(takeUntil(this._destroy$)).subscribe();
     }
 
     ngOnDestroy(): void {
         this._destroy$.next();
         this._destroy$.complete();
-    }
-
-    onOpenMovieViewMode(): void {
     }
 }

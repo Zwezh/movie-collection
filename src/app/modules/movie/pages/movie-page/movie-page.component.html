@@ -6,8 +6,7 @@
         <div class="movie-item"
              *cdkVirtualFor="let movie of movieList | movieFilter: actions.search: actions.filter | movieOrderBy: 'asc': actions.order"
              [@fadeInContentByOpacity]>
-            <mc-movie-item [movie]="movie"
-                        (openViewDetails)="onOpenMovieViewMode()"></mc-movie-item>
+            <mc-movie-item [movie]="movie"></mc-movie-item>
         </div>
     </cdk-virtual-scroll-viewport>
 </div>
