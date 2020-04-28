@@ -22,14 +22,14 @@ import {
 import { MovieRoutingModule } from './movie-routing.module';
 import {
     MovieEditPageComponent,
-    MoviePageComponent,
+    MovieListPageComponent,
     MovieViewPageComponent
 } from './pages';
 
 const COMPONENTS = [
     MovieActionsComponent,
     MovieItemComponent,
-    MoviePageComponent,
+    MovieListPageComponent,
     MovieEditPageComponent,
     MovieViewPageComponent,
     MovieViewContentComponent,

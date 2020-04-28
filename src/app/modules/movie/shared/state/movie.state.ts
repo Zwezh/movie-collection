@@ -5,7 +5,7 @@ import {
 
 export const initialMovieState: IMovieState = {
     movie: {
-        _id: null,
+        movieGlobalKey: null,
         actors: '',
         country: '',
         director: '',

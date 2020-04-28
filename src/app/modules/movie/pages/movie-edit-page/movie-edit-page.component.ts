@@ -12,7 +12,7 @@ import { takeUntil } from 'rxjs/operators';
 import { MovieEditForm } from '../../shared/form';
 import { IMovie } from '../../shared/interfaces';
 import { MovieModelService } from '../../shared/services';
-import { MovieApiConstants } from '../../constants';
+import { MovieResourcesConstants } from '../../constants';
 
 @Component({
     selector: 'mc-movie-edit-page',
@@ -22,7 +22,7 @@ import { MovieApiConstants } from '../../constants';
     encapsulation: ViewEncapsulation.None
 })
 export class MovieEditPageComponent implements OnInit, OnDestroy {
-
+    private _movieGlobalKey: string;
     private _destroy$: Subject<void>;
     private form: MovieEditForm;
     movie$: Observable<IMovie>;
@@ -33,27 +33,37 @@ export class MovieEditPageComponent implements OnInit, OnDestroy {
 
     constructor(
         private _modelService: MovieModelService,
-        private _activatedRoute: ActivatedRoute,
-        private _router: Router) {
+        private _router: Router,
+        activatedRoute: ActivatedRoute) {
         this._destroy$ = new Subject();
         this.movie$ = _modelService.selectedMovie$;
         this.form = new MovieEditForm();
+        this._movieGlobalKey = activatedRoute.snapshot.params.movieGlobalKey;
+
     }
 
     ngOnInit() {
-        const movieGlobalKey = this._activatedRoute.snapshot.params.movieGlobalKey;
-        this._modelService.getSelectedMovie(movieGlobalKey).pipe(takeUntil(this._destroy$)).subscribe(() => {
+        this._modelService.getSelectedMovie(this._movieGlobalKey).pipe(takeUntil(this._destroy$)).subscribe(() => {
             this.form.updateFormValues(this._modelService.selectedMovie);
         });
     }
 
     ngOnDestroy(): void {
-        this._modelService.setInitalState();
         this._destroy$.next();
         this._destroy$.complete();
     }
 
+    onSave(): void {
+        const movie = { ...this._modelService.selectedMovie, ...this.form.value };
+        this._modelService.updateMovie(movie).pipe(takeUntil(this._destroy$)).subscribe(() => {
+            const url = MovieResourcesConstants.MOVIE_DETAILS_PAGE.replace(':movieGlobalKey', this._movieGlobalKey);
+            this._router.navigateByUrl(url);
+        });
+
+    }
+
     onCancel(): void {
-        this._router.navigate([MovieApiConstants.PAGES.movieList])
+        const url = MovieResourcesConstants.MOVIE_DETAILS_PAGE.replace(':movieGlobalKey', this._movieGlobalKey);
+        this._router.navigateByUrl(url);
     }
 }

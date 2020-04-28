@@ -3,6 +3,7 @@
         <div class="movie-edit-page__actions">
             <button class="btn btn--primary movie-edit-page__action"
                     [title]="'save' | translate"
+                    (click)="onSave()"
                     [disabled]="isDisable">{{'save' | translate}}</button>
             <button class="btn btn--secondary movie-edit-page__action"
                     [title]="'cancel' | translate"

@@ -1,5 +1,5 @@
 export class MovieDto {
-    _id: string;
+    movieGlobalKey: string;
     actors: string;
     country: string;
     director: string;

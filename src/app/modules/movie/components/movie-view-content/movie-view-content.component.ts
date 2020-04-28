@@ -5,7 +5,7 @@ import {
     ViewEncapsulation
 } from '@angular/core';
 
-import { MovieApiConstants } from '../../constants';
+import { MovieResourcesConstants } from '../../constants';
 import { IMovie } from '../../shared/interfaces';
 
 @Component({
@@ -20,7 +20,7 @@ export class MovieViewContentComponent {
     @Input() movie: IMovie
 
     get imageUrl() {
-        return `${MovieApiConstants.GET_IMAGE}${this.movie.id}`;
+        return `${MovieResourcesConstants.GET_IMAGE}${this.movie.id}`;
     }
 
     get raitingStarCollection(): Array<string> {
@@ -31,6 +31,14 @@ export class MovieViewContentComponent {
             raitingCollection.push(this.getRaitingClass(movieRaiting, i, isHalfRaiting));
         }
         return raitingCollection;
+    }
+
+    get movieListPage(): string {
+        return MovieResourcesConstants.MOVIE_LIST_PAGE;
+    }
+
+    get movieEditPage(): string {
+        return MovieResourcesConstants.MOVIE_EDIT_PAGE.replace(':movieGlobalKey', this.movie.movieGlobalKey);
     }
 
     private raitingRound(raiting) {

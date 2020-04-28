@@ -1,2 +1,2 @@
-export * from './movie-api.constants'
+export * from './movie-resources.constants'
 export * from './movie-actions.constants'

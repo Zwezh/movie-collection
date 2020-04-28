@@ -12,13 +12,13 @@ import { IMovie } from '../../shared/interfaces';
 import { MovieModelService } from '../../shared/services';
 
 @Component({
-    selector: 'mc-movie-page',
-    templateUrl: './movie-page.component.html',
-    styleUrls: ['./movie-page.component.scss'],
+    selector: 'mc-movie-list-page',
+    templateUrl: './movie-list-page.component.html',
+    styleUrls: ['./movie-list-page.component.scss'],
     animations: [FADE_IN_CONTENT_BY_OPACITY],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MoviePageComponent implements OnInit, OnDestroy {
+export class MovieListPageComponent implements OnInit, OnDestroy {
 
     private _destroy$: Subject<void>;
 
@@ -27,17 +27,17 @@ export class MoviePageComponent implements OnInit, OnDestroy {
     isHasItems: boolean;
 
     constructor(
-        private _movieService: MovieModelService
+        private _modelService: MovieModelService
     ) {
         this.search = '';
-        this._movieService.setInitalState();
-        this.movieList$ = _movieService.movieList;
+        this._modelService.setInitalState();
+        this.movieList$ = _modelService.movieList;
         this._destroy$ = new Subject();
         this.isHasItems = false
     }
 
     ngOnInit(): void {
-        this._movieService.getMovieCollection().pipe(takeUntil(this._destroy$)).subscribe();
+        this._modelService.getMovieCollection().pipe(takeUntil(this._destroy$)).subscribe();
     }
 
     ngOnDestroy(): void {

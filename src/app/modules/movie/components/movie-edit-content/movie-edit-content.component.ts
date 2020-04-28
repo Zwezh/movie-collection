@@ -6,8 +6,8 @@ import {
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-import { MovieApiConstants } from '../../constants';
 import { IMovie } from '../../shared/interfaces';
+import { MovieResourcesConstants } from '../../constants';
 
 @Component({
     selector: 'mc-movie-edit-content',
@@ -22,7 +22,7 @@ export class MovieEditContentComponent {
     @Input() form: FormGroup = null;
 
     get imageUrl() {
-        return `${MovieApiConstants.GET_IMAGE}${this.movie.id}`;
+        return `${MovieResourcesConstants.GET_IMAGE}${this.movie.id}`;
     }
 
 }

@@ -1,9 +1,9 @@
-<div class="movie-list-wrpapper"
+<div class="movie-list"
      *ngIf="movieList$ | async as movieList; else hasNoItems;">
     <mc-movie-actions #actions></mc-movie-actions>
-    <cdk-virtual-scroll-viewport class="movie-list-container"
+    <cdk-virtual-scroll-viewport class="movie-list__container"
                                  [itemSize]="81">
-        <div class="movie-item"
+        <div class="movie-list__item"
              *cdkVirtualFor="let movie of movieList | movieFilter: actions.search: actions.filter | movieOrderBy: 'asc': actions.order"
              [@fadeInContentByOpacity]>
             <mc-movie-item [movie]="movie"></mc-movie-item>
@@ -11,8 +11,8 @@
     </cdk-virtual-scroll-viewport>
 </div>
 <ng-template #hasNoItems>
-    <div class="has-no-items">
-        <p class="content text--description"
+    <div class="movie-list__empty">
+        <p class="movie-list__empty-content text--description"
            title="{{'hasNoMovies' | translate}}">
             {{'hasNoMovies' | translate}}
         </p>

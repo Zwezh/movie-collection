@@ -23,10 +23,10 @@
                       title="{{movie.originalName}}">{{movie.originalName}}</span>
             </div>
             <div class="movie-view__actions text--description">
-                <a [routerLink]="['/movie']"
+                <a [routerLink]="movieListPage"
                    class="text--title"
                    title="{{'back' | translate}}"><i class="las la-arrow-alt-circle-left"></i></a>
-                <a [routerLink]="['/movie/edit/'+movie._id]"
+                <a [routerLink]="movieEditPage"
                    class="text--title"
                    title="{{'editMovie' | translate}}"><i class="las la-pen"></i></a>
             </div>

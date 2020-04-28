@@ -1,0 +1,27 @@
+@import "./../../../../../assets/styles/colors";
+
+.movie-list {
+  height: 100%;
+  background: $gray-lightest;
+
+  &__container {
+    height: calc(100% - 50px);
+
+  }
+
+  &__item {
+    margin: 10px 20px;
+  }
+
+  &__empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+
+  }
+  &__empty-coontent {
+    padding: 30px;
+    border: 1px solid $gray-lighter;
+  }
+}

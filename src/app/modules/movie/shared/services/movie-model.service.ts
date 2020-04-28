@@ -23,11 +23,18 @@ export class MovieModelService {
     get selectedMovie(): IMovie {
         return this._selectedMovie$.getValue();
     }
-    constructor(private _apiService: MovieApiService) { }
-
-    setInitalState(): void {
+    constructor(private _apiService: MovieApiService) {
         this._movieList$ = new BehaviorSubject<Array<IMovie>>(initialMovieState.movieCollection);
         this._selectedMovie$ = new BehaviorSubject<IMovie>(initialMovieState.movie);
+    }
+
+    setInitalState(): void {
+        this._movieList$.next(initialMovieState.movieCollection);
+        this._selectedMovie$.next(initialMovieState.movie);
+    }
+
+    setSelectedMovie(movie: IMovie): void {
+        this._selectedMovie$.next(movie);
     }
 
     getMovieCollection(): Observable<any> {
@@ -37,7 +44,9 @@ export class MovieModelService {
     }
 
     getSelectedMovie(movieGlobalKey: string): Observable<any> {
-        if (this.selectedMovie._id === movieGlobalKey) {
+        const foundMovie = this.findMovieByGlobalKey(movieGlobalKey);
+        if (foundMovie) {
+            this._selectedMovie$.next(foundMovie);
             return this.selectedMovie$;
         } else {
             return this._apiService.getMovie(movieGlobalKey).pipe(
@@ -45,5 +54,16 @@ export class MovieModelService {
                     this._selectedMovie$.next(response);
                 }));
         }
+    }
+
+    updateMovie(movie: IMovie): Observable<any> {
+        return this._apiService.updateMovie(movie).pipe(
+            tap((response: MovieDto) => {
+                this._selectedMovie$.next(response)
+            }));
+    }
+
+    private findMovieByGlobalKey(movieGlobalKey): IMovie {
+        return this._movieList$.getValue().find((movie: IMovie) => movie.movieGlobalKey === movieGlobalKey);
     }
 }

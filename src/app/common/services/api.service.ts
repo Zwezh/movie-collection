@@ -12,15 +12,15 @@ export class ApiService {
     }
 
     protected post(url: string, params?: any): Observable<any> {
-        return this.http.post(`${this._apiPrefix}${url}`, { params });
+        return this.http.post(`${this._apiPrefix}${url}`, params);
     }
 
     protected put(url: string, params?: any): Observable<any> {
 
-        return this.http.put(url, { params });
+        return this.http.put(`${this._apiPrefix}${url}`, params);
     }
 
     protected delete(url: string, params?: any): Observable<any> {
-        return this.http.post(url, { params });
+        return this.http.post(`${this._apiPrefix}${url}`, params);
     }
 }

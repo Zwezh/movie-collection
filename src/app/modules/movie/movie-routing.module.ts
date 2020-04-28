@@ -6,14 +6,14 @@ import {
 
 import {
     MovieEditPageComponent,
-    MoviePageComponent,
+    MovieListPageComponent,
     MovieViewPageComponent
 } from './pages';
 
 const routes: Routes = [
     {
         path: '',
-        component: MoviePageComponent,
+        component: MovieListPageComponent,
         pathMatch: 'full'
     },
     {
