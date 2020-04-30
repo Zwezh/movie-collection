@@ -1,4 +1,8 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import {
+    ChangeDetectionStrategy,
+    Component,
+    Input
+} from '@angular/core';
 
 @Component({
     selector: 'mc-movie-raiting',
