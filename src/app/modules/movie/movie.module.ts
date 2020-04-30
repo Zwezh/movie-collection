@@ -17,7 +17,8 @@ import {
     MovieActionsComponent,
     MovieEditContentComponent,
     MovieItemComponent,
-    MovieViewContentComponent,
+    MovieRaitingComponent,
+    MovieViewContentComponent
 } from './components';
 import { MovieRoutingModule } from './movie-routing.module';
 import {
@@ -34,6 +35,7 @@ const COMPONENTS = [
     MovieViewPageComponent,
     MovieViewContentComponent,
     MovieEditContentComponent,
+    MovieRaitingComponent,
     MovieFilterPipe,
     MovieOrderByPipe
 ]

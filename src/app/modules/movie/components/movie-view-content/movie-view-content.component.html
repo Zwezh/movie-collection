@@ -3,16 +3,7 @@
         <img class="movie-view__poster"
              [src]="imageUrl"
              [alt]="'movie.logo' | translate" />
-        <figcaption class="movie-view__raiting text--biggest text--raiting"
-                    [title]="movie.raiting">
-            <div class="movie-view__stars">
-                <ng-container *ngFor="let item of raitingStarCollection">
-                    <i class="la-star"
-                       [ngClass]="item"></i>
-                </ng-container>
-            </div>
-            {{movie.raiting}}
-        </figcaption>
+             <mc-movie-raiting [raiting]="movie.raiting"></mc-movie-raiting>
     </figure>
     <main class="movie-view__main">
         <div class="movie-view__header">
