@@ -6,13 +6,15 @@ import {
     ViewEncapsulation
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MessagesStore } from '@appLayouts/messages';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
+import { MovieResourcesConstants } from '../../constants';
 import { MovieEditForm } from '../../shared/form';
 import { IMovie } from '../../shared/interfaces';
 import { MovieModelService } from '../../shared/services';
-import { MovieResourcesConstants } from '../../constants';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'mc-movie-edit-page',
@@ -34,6 +36,8 @@ export class MovieEditPageComponent implements OnInit, OnDestroy {
     constructor(
         private _modelService: MovieModelService,
         private _router: Router,
+        private _messages: MessagesStore,
+        private _translator: TranslateService,
         activatedRoute: ActivatedRoute) {
         this._destroy$ = new Subject();
         this.movie$ = _modelService.selectedMovie$;
@@ -58,6 +62,7 @@ export class MovieEditPageComponent implements OnInit, OnDestroy {
         this._modelService.updateMovie(movie).pipe(takeUntil(this._destroy$)).subscribe(() => {
             const url = MovieResourcesConstants.MOVIE_DETAILS_PAGE.replace(':movieGlobalKey', this._movieGlobalKey);
             this._router.navigateByUrl(url);
+            this._messages.addSuccessMessage(this._translator.instant('savedSuccesss'))
         });
 
     }

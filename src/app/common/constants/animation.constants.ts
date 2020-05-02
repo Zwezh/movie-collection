@@ -18,6 +18,17 @@ export const FADE_IN_CONTENT_BY_HEIGHT: AnimationTriggerMetadata = trigger('fade
   ])
 ]);
 
+export const FADE_IN_CONTENT_BY_TRANSLATE_X: AnimationTriggerMetadata = trigger('fadeInContentByTranslateX', [
+    transition(':enter', [
+      style({ transform: 'translateX(100%)' }),
+      animate('300ms', style({ transform: 'translateX(0)' }))
+    ]),
+    transition(':leave', [
+      style({ transform: 'translateX(0)' }),
+      animate('300ms', style({ transform: 'translateX(100%)' }))
+    ])
+  ]);
+
 export const FADE_IN_CONTENT_BY_HEIGHT_OPACITY: AnimationTriggerMetadata = trigger('fadeInContentByHeightOpacity', [
   transition(':enter', [
     style({ opacity: 0, height: '0px' }),

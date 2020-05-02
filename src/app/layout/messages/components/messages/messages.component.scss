@@ -1,0 +1,13 @@
+@import "./../../../../../assets/styles/colors";
+
+.messages {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+
+  &__item {
+    opacity: 0.5;
+    margin: 5px;
+  }
+}

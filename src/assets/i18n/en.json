@@ -29,5 +29,6 @@
     "order": "Order",
     "hasNoMovies": "Has no movies",
     "save": "Save",
-    "cancel":"Cancel"
+    "cancel":"Cancel",
+    "savedSuccesss":"The movie was successfully saved"
 }
