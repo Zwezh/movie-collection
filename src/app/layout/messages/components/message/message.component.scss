@@ -1,0 +1,15 @@
+@import "./../../../../../assets/styles/colors";
+
+.message {
+  padding: 10px 10px;
+  color: $white;
+  width: 250px;
+}
+
+.success {
+  background-color: $success;
+}
+
+.error {
+  background-color: $danger;
+}

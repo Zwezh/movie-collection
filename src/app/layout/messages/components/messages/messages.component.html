@@ -1,0 +1,10 @@
+<div class="messages">
+    <ng-container>
+        <div class="messages__item"
+             *ngFor="let message of messages$ | async"
+             [@fadeInContentByTranslateX]>
+            <mc-message [message]="message"
+                        (completed)="onCompleted($event)"></mc-message>
+        </div>
+    </ng-container>
+</div>
