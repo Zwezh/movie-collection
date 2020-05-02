@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessagesStore } from '@appLayouts/messages';
+import { TranslateService } from '@ngx-translate/core';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -14,7 +15,6 @@ import { MovieResourcesConstants } from '../../constants';
 import { MovieEditForm } from '../../shared/form';
 import { IMovie } from '../../shared/interfaces';
 import { MovieModelService } from '../../shared/services';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'mc-movie-edit-page',
