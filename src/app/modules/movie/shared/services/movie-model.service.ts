@@ -4,66 +4,59 @@ import { tap } from 'rxjs/operators';
 
 import { MovieDto } from '../dto';
 import { IMovie } from '../interfaces';
-import { initialMovieState } from '../state';
 import { MovieApiService } from './api/movie-api.service';
+import { MovieStore } from '../movie.store';
 
 
 @Injectable()
 export class MovieModelService {
 
-    private _movieList$: BehaviorSubject<Array<IMovie>>;
     get movieList(): Observable<Array<IMovie>> {
-        return this._movieList$.asObservable();
+        return this._store.movieList$;
     }
 
-    private _selectedMovie$: BehaviorSubject<IMovie>;
     get selectedMovie$(): Observable<IMovie> {
-        return this._selectedMovie$.asObservable();
-    }
-    get selectedMovie(): IMovie {
-        return this._selectedMovie$.getValue();
-    }
-    constructor(private _apiService: MovieApiService) {
-        this._movieList$ = new BehaviorSubject<Array<IMovie>>(initialMovieState.movieCollection);
-        this._selectedMovie$ = new BehaviorSubject<IMovie>(initialMovieState.movie);
+        return this._store.selectedMovie$;
     }
 
-    setInitalState(): void {
-        this._movieList$.next(initialMovieState.movieCollection);
-        this._selectedMovie$.next(initialMovieState.movie);
-    }
+    constructor(
+        private _apiService: MovieApiService,
+        private _store: MovieStore
+    ) { }
 
     setSelectedMovie(movie: IMovie): void {
-        this._selectedMovie$.next(movie);
+        this._store.setSelectedMovie(movie);
     }
 
     getMovieCollection(): Observable<any> {
         return this._apiService.getMovieCollection().pipe(
-            tap((response: Array<MovieDto>) => this._movieList$.next(response))
+            tap((response: Array<MovieDto>) => this._store.setMovieList(response))
         );
     }
 
     getSelectedMovie(movieGlobalKey: string): Observable<any> {
         const foundMovie = this.findMovieByGlobalKey(movieGlobalKey);
         if (foundMovie) {
-            this._selectedMovie$.next(foundMovie);
+            this._store.setSelectedMovie(foundMovie);
             return this.selectedMovie$;
         } else {
             return this._apiService.getMovie(movieGlobalKey).pipe(
                 tap((response: MovieDto) => {
-                    this._selectedMovie$.next(response);
+                    this._store.setSelectedMovie(response);
                 }));
         }
     }
 
-    updateMovie(movie: IMovie): Observable<any> {
+    updateMovie(formValue: Partial<IMovie>): Observable<any> {
+        const movie = { ...this._store.selectedMovie, ...formValue };
+
         return this._apiService.updateMovie(movie).pipe(
             tap((response: MovieDto) => {
-                this._selectedMovie$.next(response)
+                this._store.setSelectedMovie(response)
             }));
     }
 
     private findMovieByGlobalKey(movieGlobalKey): IMovie {
-        return this._movieList$.getValue().find((movie: IMovie) => movie.movieGlobalKey === movieGlobalKey);
+        return this._store.movieList.find((movie: IMovie) => movie.movieGlobalKey === movieGlobalKey);
     }
 }

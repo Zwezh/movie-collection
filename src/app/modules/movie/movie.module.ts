@@ -4,6 +4,7 @@ import { EditFieldModule } from '@appComponents/edit-field';
 import { ListItemModule } from '@appComponents/list-item';
 import { SharedModule } from '@appSharedModule';
 
+import { MovieStore } from './shared/movie.store';
 import {
     MovieFilterPipe,
     MovieOrderByPipe
@@ -50,6 +51,7 @@ const COMPONENTS = [
     ],
     declarations: [COMPONENTS],
     providers: [
+        MovieStore,
         MovieModelService,
         MovieApiService
     ]

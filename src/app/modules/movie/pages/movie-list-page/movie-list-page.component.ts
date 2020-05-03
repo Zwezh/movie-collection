@@ -30,7 +30,6 @@ export class MovieListPageComponent implements OnInit, OnDestroy {
         private _modelService: MovieModelService
     ) {
         this.search = '';
-        this._modelService.setInitalState();
         this.movieList$ = _modelService.movieList;
         this._destroy$ = new Subject();
         this.isHasItems = false

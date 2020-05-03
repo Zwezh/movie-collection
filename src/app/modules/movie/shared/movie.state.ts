@@ -1,7 +1,7 @@
 import {
     IMovie,
     IMovieState
-} from '../interfaces';
+} from './interfaces';
 
 export const initialMovieState: IMovieState = {
     movie: {

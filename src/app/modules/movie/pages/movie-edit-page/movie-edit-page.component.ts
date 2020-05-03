@@ -47,9 +47,10 @@ export class MovieEditPageComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        this._modelService.getSelectedMovie(this._movieGlobalKey).pipe(takeUntil(this._destroy$)).subscribe(() => {
-            this.form.updateFormValues(this._modelService.selectedMovie);
-        });
+        this._modelService.getSelectedMovie(this._movieGlobalKey)
+            .pipe(takeUntil(this._destroy$)).subscribe((movie: IMovie) => {
+                this.form.updateFormValues(movie);
+            });
     }
 
     ngOnDestroy(): void {
@@ -58,8 +59,7 @@ export class MovieEditPageComponent implements OnInit, OnDestroy {
     }
 
     onSave(): void {
-        const movie = { ...this._modelService.selectedMovie, ...this.form.value };
-        this._modelService.updateMovie(movie).pipe(takeUntil(this._destroy$)).subscribe(() => {
+        this._modelService.updateMovie(this.form.value).pipe(takeUntil(this._destroy$)).subscribe(() => {
             const url = MovieResourcesConstants.MOVIE_DETAILS_PAGE.replace(':movieGlobalKey', this._movieGlobalKey);
             this._router.navigateByUrl(url);
             this._messages.addSuccessMessage(this._translator.instant('savedSuccesss'))
