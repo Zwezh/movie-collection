@@ -1,0 +1,15 @@
+@import "../colors";
+
+.page {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: $gray-lightest;
+}
+
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: $white;
+  border: 1px solid $gray-lighter;
+}

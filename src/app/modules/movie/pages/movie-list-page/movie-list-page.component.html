@@ -1,21 +1,22 @@
-<div class="movie-list"
-     *ngIf="movieList$ | async as movieList; else hasNoItems;">
+<div class="page"
+     *ngIf="(movieList$ | async).length > 0; else hasNoItems;">
     <mc-movie-actions #actions></mc-movie-actions>
-    <cdk-virtual-scroll-viewport class="movie-list__container"
+    <cdk-virtual-scroll-viewport class="movie-list"
                                  [itemSize]="81">
         <div class="movie-list__item"
-             *cdkVirtualFor="let movie of movieList | movieFilter: actions.search: actions.filter | movieOrderBy: 'asc': actions.order"
+             *cdkVirtualFor="let movie of movieList$ | async | movieFilter: actions.search: actions.filter | movieOrderBy: 'asc': actions.order"
              [@fadeInContentByOpacity]>
             <mc-movie-item [movie]="movie"></mc-movie-item>
         </div>
     </cdk-virtual-scroll-viewport>
 </div>
 <ng-template #hasNoItems>
-    <div class="movie-list__empty">
-        <p class="movie-list__empty-content text--description"
+    <div class="empty">
+        <p class="container empty__container text--subtitle"
            title="{{'hasNoMovies' | translate}}">
             {{'hasNoMovies' | translate}}
         </p>
     </div>
 </ng-template>
-<a [routerLink]="[ 'add']" class="movie-list__add-link"><i class="las la-plus"></i></a>
+<a [routerLink]="[ 'add']"
+   class="add-link"><i class="las la-plus"></i></a>
