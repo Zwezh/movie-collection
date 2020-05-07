@@ -2,35 +2,41 @@
 
 $side_width: 400px;
 
-.movie-view {
-  height: 100%;
-  box-sizing: border-box;
-  border-radius: 2px;
+.container__view {
   padding: 20px;
-  background-color: $white;
-  border: 1px solid $gray-lighter;
   display: flex;
   flex-wrap: wrap;
+}
+
+.view {
+  &__header {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  width: $side_width;
+  box-sizing: border-box;
+}
+
+.poster {
+  max-width: calc(100% - 20px);
+}
+
+.side__poster {
+  margin-bottom: 20px;
+}
+
+.main {
+  position: relative;
+  box-sizing: border-box;
+  height: inherit;
+  width: calc(100% - #{$side_width});
 
   &__side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: $side_width;
-    box-sizing: border-box;
-    padding: 0 20px;
-  }
-
-  &__poster {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  &__main {
-    position: relative;
-    box-sizing: border-box;
-    height: inherit;
-    width: calc(100% - #{$side_width});
     padding-left: 20px;
 
     &:before {
@@ -42,31 +48,32 @@ $side_width: 400px;
       border-left: 1px solid $gray-lighter;
     }
   }
+}
+
+.actions {
+  width: 60px;
+  min-width: 60px;
+  text-align: right;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $gray-lighter;
 
   &__actions {
-      margin-left: 10px;
-      width: 60px;
-      min-width: 60px;
-      text-align: right;
-  }
-
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid $gray-lighter;
+    margin-left: 10px;
   }
 
   &__name+&__name {
     margin-left: 20px;
   }
+}
 
-  &__field {
-    line-height: 2rem;
-    height: 2rem;
-  }
+.field {
+  line-height: 2rem;
+  height: 2rem;
 
   &__label {
     min-width: 150px;

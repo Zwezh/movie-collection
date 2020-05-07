@@ -1,0 +1,48 @@
+@import "../colors";
+
+.text-header {
+  font-weight: 700;
+}
+
+.text-biggest {
+  font-size: 1.75em;
+}
+
+.text-title {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+.text-subtitle {
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.text-description {
+  font-size: 1.25em;
+  font-weight: 100;
+  color: $gray-light;
+}
+
+.text-label {
+  color: $gray;
+  height: 1em;
+  line-height: 1em;
+}
+
+.text-value {
+  color: $gray-light;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-raiting {
+  color: $danger;
+  font-weight: 500;
+}

@@ -10,7 +10,7 @@ import { IMessage } from '../../shared';
 
 @Component({
     selector: 'mc-message',
-    template: '<p class="message text--description text--overflow" [ngClass]="message.type">{{message.description}}</p>',
+    template: '<p class="message text-description text-overflow" [ngClass]="message.type">{{message.description}}</p>',
     styleUrls: ['./message.component.scss']
 })
 export class MessageComponent implements OnInit {

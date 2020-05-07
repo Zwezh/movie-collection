@@ -1,9 +1,9 @@
 <div>
-    <a class="btn-language text--subtitle"
+    <a class="btn-language text-subtitle"
        [class.active]="(selectedLanguage$ | async) === languages.en"
        (click)="toggleLanguage(languages.en)"
        title="{{ 'languages.english' | translate }}">{{ 'languages.english' | translate }}</a>
-    <a class="btn-language text--subtitle"
+    <a class="btn-language text-subtitle"
        [class.active]="(selectedLanguage$ | async) === languages.ru"
        (click)="toggleLanguage(languages.ru)"
        title="{{ 'languages.russian' | translate }}">{{ 'languages.russian' | translate }}</a>
