@@ -1,7 +1,7 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { NgModule } from '@angular/core';
-import { EditFieldModule } from '@appComponents/edit-field';
 import { ListItemModule } from '@appComponents/list-item';
+import { ValidationMessagesModule } from '@appComponents/validation-message';
 import { SharedModule } from '@appSharedModule';
 
 import { MovieStore } from './shared/movie.store';
@@ -23,6 +23,7 @@ import {
 } from './components';
 import { MovieRoutingModule } from './movie-routing.module';
 import {
+    MovieCreatePageComponent,
     MovieEditPageComponent,
     MovieListPageComponent,
     MovieViewPageComponent
@@ -34,6 +35,7 @@ const COMPONENTS = [
     MovieListPageComponent,
     MovieEditPageComponent,
     MovieViewPageComponent,
+    MovieCreatePageComponent,
     MovieViewContentComponent,
     MovieEditContentComponent,
     MovieRaitingComponent,
@@ -47,7 +49,7 @@ const COMPONENTS = [
         MovieRoutingModule,
         ScrollingModule,
         ListItemModule,
-        EditFieldModule
+        ValidationMessagesModule
     ],
     declarations: [COMPONENTS],
     providers: [

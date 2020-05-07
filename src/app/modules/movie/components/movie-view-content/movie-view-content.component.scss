@@ -45,7 +45,9 @@ $side_width: 400px;
 
   &__actions {
       margin-left: 10px;
-      width: 100px;
+      width: 60px;
+      min-width: 60px;
+      text-align: right;
   }
 
   &__header {

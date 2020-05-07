@@ -1,0 +1,44 @@
+﻿<div class="validation"
+     *ngIf="control?.invalid && (control?.dirty || control?.touched)"
+     [@fadeInContentByOpacity]>
+    <div class="validation__message-error"
+         *ngIf="control.errors.required"
+         [@fadeInContentByOpacity]>
+        {{required}}
+    </div>
+    <div class="validation__message-error"
+         *ngIf="control.errors.maxlength"
+         [@fadeInContentByOpacity]>
+        {{maxLength}}
+    </div>
+    <div class="validation__message-error"
+         *ngIf="control.errors.minlength"
+         [@fadeInContentByOpacity]>
+        {{minLength}}
+    </div>
+    <div class="validation__message-error"
+         *ngIf="control.errors.pattern"
+         [@fadeInContentByOpacity]>
+        {{pattern}}
+    </div>
+    <div class="validation__message-error"
+         *ngIf="control.errors.equalValues"
+         [@fadeInContentByOpacity]>
+        {{equalValues}}
+    </div>
+    <div class="validation__message-error"
+         *ngIf="control.errors.dateTimeInvalid"
+         [@fadeInContentByOpacity]>
+        {{dateTimeInvalid}}
+    </div>
+    <div class="validation__message-error"
+         *ngIf="control.errors.max"
+         [@fadeInContentByOpacity]>
+        {{max}}
+    </div>
+    <div class="validation__message-error"
+         *ngIf="control.errors.other"
+         [@fadeInContentByOpacity]>
+        {{other}}
+    </div>
+</div>

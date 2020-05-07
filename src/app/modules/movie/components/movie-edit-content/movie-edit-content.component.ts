@@ -6,8 +6,8 @@ import {
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
-import { IMovie } from '../../shared/interfaces';
 import { MovieResourcesConstants } from '../../constants';
+import { IMovie } from '../../shared/interfaces';
 
 @Component({
     selector: 'mc-movie-edit-content',

@@ -6,10 +6,10 @@ const routes: Routes = [
         path: 'movie',
         loadChildren: () => import('./modules/movie/movie.module').then((m) => m.MovieModule)
     },
-        // {
-        //     path: '**',
-        //     redirectTo: 'movies'
-        // }
+    {
+        path: '**',
+        redirectTo: '/movie'
+    }
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

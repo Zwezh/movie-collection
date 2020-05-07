@@ -1,6 +1,7 @@
 @import "./assets/styles/reset";
 @import "./assets/styles/fonts";
 @import "./assets/styles/colors";
+@import "./assets/styles/form-control";
 
 html,
 body {
@@ -9,14 +10,14 @@ body {
 
 body {
   font-family: Roboto, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 input,
 select,
 button {
   font-family: Roboto, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.1em;
   color: $gray-light;
   border: 1px solid $gray-lighter;
   padding: 0 10px;
@@ -125,17 +126,4 @@ a {
 .text--raiting {
   color: $danger;
   font-weight: 500;
-}
-
-.label--input {
-  font-family: Roboto, sans-serif;
-  font-size: 1.25em;
-  color: $gray-light;
-  border: 1px solid $gray-lighter;
-  border-right: none;
-  padding: 0 10px;
-  height: 2.16rem;
-  line-height: 2.16rem;
-  box-sizing: border-box;
-  font-weight: 100;
 }

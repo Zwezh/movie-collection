@@ -1,7 +1,7 @@
 @import "./../../../../../assets/styles/colors";
 
 $side_width: 400px;
-$label_width: 205px;
+$label_width: 185px;
 
 .movie-edit {
   height: 100%;
@@ -20,6 +20,7 @@ $label_width: 205px;
   &__poster {
     max-width: 100%;
     margin-bottom: 20px;
+    min-height: 360px;
   }
 
   &__main {
@@ -39,6 +40,12 @@ $label_width: 205px;
     }
   }
 
+  &__actions {
+    margin-left: 10px;
+    width: 60px;
+    min-width: 60px;
+    text-align: right;
+  }
 
   &__header {
     display: flex;
@@ -52,19 +59,18 @@ $label_width: 205px;
   &__name+&__name {
     margin-left: 20px;
   }
+}
 
-  &__field {
-    line-height: 2rem;
-    height: 2rem;
-    margin-top: 10px;
-  }
+
+.edit-field {
+  margin-top: 10px;
+
 
   &__label {
-    display: inline-block;
     min-width: $label_width;
   }
-  &__value {
-    display: inline-block;
+
+  &__input {
     width: calc(100% - #{$label_width});
   }
 }

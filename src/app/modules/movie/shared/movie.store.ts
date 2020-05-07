@@ -33,6 +33,6 @@ export class MovieStore {
     }
 
     setSelectedMovie(value: IMovie): void {
-        this._selectedMovie$.next(value);
+        this._selectedMovie$.next(value ? value : initialMovieState.movie);
     }
 }

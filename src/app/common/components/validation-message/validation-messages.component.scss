@@ -1,0 +1,10 @@
+﻿@import "./../../../../assets/styles/colors";
+
+
+.validation {
+  margin: 5px 0;
+
+  &__message-error {
+    color: $danger;
+  }
+}

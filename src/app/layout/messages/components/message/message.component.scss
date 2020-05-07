@@ -7,9 +7,11 @@
 }
 
 .success {
+  border-left: 3px solid $success;
   background-color: $success;
 }
 
 .error {
+  border-left: 3px solid $danger;
   background-color: $danger;
 }

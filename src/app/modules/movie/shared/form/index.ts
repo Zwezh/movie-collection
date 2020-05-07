@@ -1,1 +1,1 @@
-export * from './movie-edit.form';
+export * from './movie.form';

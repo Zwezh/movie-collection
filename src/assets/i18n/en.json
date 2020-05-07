@@ -29,6 +29,10 @@
     "order": "Order",
     "hasNoMovies": "Has no movies",
     "save": "Save",
-    "cancel":"Cancel",
-    "savedSuccesss":"The movie was successfully saved"
+    "cancel": "Cancel",
+    "savedSuccesss": "The movie was successfully saved",
+    "errors": {
+        "required": "This field is required",
+        "minLength": "This field is too short"
+    }
 }

@@ -6,7 +6,7 @@ import {
 
 import { IMovie } from '../interfaces';
 
-export class MovieEditForm extends FormGroup {
+export class MovieForm extends FormGroup {
 
     get actors(): FormControl {
         return this.get('actors') as FormControl;

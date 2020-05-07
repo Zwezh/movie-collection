@@ -4,7 +4,7 @@ import { ApiService } from '@appServices';
 import { Observable } from 'rxjs';
 
 import { MovieResourcesConstants } from '../../../constants';
-import { MovieDto } from '../../dto';
+import { MovieDto, CreateMovieDto } from '../../dto';
 import { IMovie } from '../../interfaces';
 
 @Injectable()
@@ -21,8 +21,8 @@ export class MovieApiService extends ApiService {
         return this.get(`${MovieResourcesConstants.MOVIE_API}/${movieGlobalKey}`, null);
     }
 
-    addMovie(movie: IMovie): Observable<MovieDto> {
-        return this.post(`${MovieResourcesConstants.MOVIE_API}/${movie.movieGlobalKey}`, movie);
+    addMovie(movie: CreateMovieDto): Observable<MovieDto> {
+        return this.post(MovieResourcesConstants.MOVIE_API, movie);
     }
 
     updateMovie(movie: IMovie): Observable<MovieDto> {

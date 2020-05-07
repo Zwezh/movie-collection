@@ -1,16 +1,5 @@
-export class MovieDto {
+import { CreateMovieDto } from './create-movie.dto';
+
+export class MovieDto extends CreateMovieDto {
     movieGlobalKey: string;
-    actors: string;
-    country: string;
-    director: string;
-    duration: string;
-    genre: string;
-    id: number;
-    more: string;
-    originalName: string;
-    quality: string;
-    raiting: number;
-    russianName: string;
-    translation: string;
-    year: number;
 }

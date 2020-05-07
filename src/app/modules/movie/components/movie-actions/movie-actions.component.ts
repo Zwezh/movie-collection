@@ -23,4 +23,9 @@ export class MovieActionsComponent {
         return MovieActionsConstants.ORDER;
     }
 
+    constructor() {
+        this.search = '';
+        this.filter = '';
+        this.order = '';
+    }
 }

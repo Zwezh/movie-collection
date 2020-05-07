@@ -49,8 +49,14 @@ export class MovieModelService {
 
     updateMovie(formValue: Partial<IMovie>): Observable<any> {
         const movie = { ...this._store.selectedMovie, ...formValue };
-
         return this._apiService.updateMovie(movie).pipe(
+            tap((response: MovieDto) => {
+                this._store.setSelectedMovie(response)
+            }));
+    }
+
+    createMovie(formValue: Partial<IMovie>): Observable<any> {
+        return this._apiService.addMovie(formValue as IMovie).pipe(
             tap((response: MovieDto) => {
                 this._store.setSelectedMovie(response)
             }));

@@ -5,6 +5,7 @@ import {
 } from '@angular/router';
 
 import {
+    MovieCreatePageComponent,
     MovieEditPageComponent,
     MovieListPageComponent,
     MovieViewPageComponent
@@ -14,6 +15,11 @@ const routes: Routes = [
     {
         path: '',
         component: MovieListPageComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'add',
+        component: MovieCreatePageComponent,
         pathMatch: 'full'
     },
     {

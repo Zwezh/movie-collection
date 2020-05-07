@@ -15,67 +15,122 @@
             </div>
         </div>
         <form [formGroup]="form">
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.id' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="id"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.russianName' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="russianName"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.originalName' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="originalName"></mc-edit-field>
-
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.year' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="year"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.country' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="country"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.duration' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="duration"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.genre' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="genre"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.director' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="director"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.actors' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="actors"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.translation' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="translation"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.quality' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="quality"></mc-edit-field>
-            <mc-edit-field fieldClass="movie-edit__field"
-                           labelClass="movie-edit__label text-description"
-                           [label]="'movie.more' | translate"
-                           valueClass="movie-edit__value"
-                           formControlName="more"></mc-edit-field>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.id' | translate}}">{{'movie.id' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="id"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.id"
+                                    [required]="'errors.required' | translate"></mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.russianName' | translate}}">{{'movie.russianName' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="russianName"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.russianName"
+                                    [required]="'errors.required' | translate"> </mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.originalName' | translate}}">{{'movie.originalName' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="originalName"
+                       type="text">
+            </p>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.raiting' | translate}}">{{'movie.raiting' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="raiting"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.raiting"
+                                    [required]="'errors.required' | translate"> </mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.year' | translate}}">{{'movie.year' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="year"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.year"
+                                    [required]="'errors.required' | translate"
+                                    [minLength]="'errors.minLength' | translate"> </mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.country' | translate}}">{{'movie.country' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="country"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.country"
+                                    [required]="'errors.required' | translate"> </mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.duration' | translate}}">{{'movie.duration' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="duration"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.duration"
+                                    [required]="'errors.required' | translate"> </mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.genre' | translate}}">{{'movie.genre' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="genre"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.genre"
+                                    [required]="'errors.required' | translate"> </mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.director' | translate}}">{{'movie.director' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="director"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.director"
+                                    [required]="'errors.required' | translate"></mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.actors' | translate}}">{{'movie.actors' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="actors"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.actors"
+                                    [required]="'errors.required' | translate"></mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.translation' | translate}}">{{'movie.translation' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="translation"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.translation"
+                                    [required]="'errors.required' | translate"></mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.quality' | translate}}">{{'movie.quality' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="quality"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.quality"
+                                    [required]="'errors.required' | translate"></mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.more' | translate}}">{{'movie.more' | translate}}</label>
+                <input class="form-control__input edit-field__input"
+                       formControlName="more"
+                       type="text">
+            </p>
+            <mc-validation-messages [control]="form.more"
+                                    [required]="'errors.required' | translate"></mc-validation-messages>
         </form>
     </main>
 </div>

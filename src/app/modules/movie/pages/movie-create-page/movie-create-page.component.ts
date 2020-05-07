@@ -2,7 +2,6 @@ import {
     ChangeDetectionStrategy,
     Component,
     OnDestroy,
-    OnInit,
     ViewEncapsulation
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -17,20 +16,19 @@ import { IMovie } from '../../shared/interfaces';
 import { MovieModelService } from '../../shared/services';
 
 @Component({
-    selector: 'mc-movie-edit-page',
-    templateUrl: './movie-edit-page.component.html',
-    styleUrls: ['./movie-edit-page.component.scss'],
+    templateUrl: './movie-create-page.component.html',
+    styleUrls: ['./movie-create-page.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None
 })
-export class MovieEditPageComponent implements OnInit, OnDestroy {
+export class MovieCreatePageComponent implements OnDestroy {
     private _movieGlobalKey: string;
     private _destroy$: Subject<void>;
     private form: MovieForm;
     movie$: Observable<IMovie>;
 
     get isDisable(): boolean {
-        return this.form.invalid || this.form.pristine;
+        return this.form.invalid;
     }
 
     constructor(
@@ -42,15 +40,7 @@ export class MovieEditPageComponent implements OnInit, OnDestroy {
         this._destroy$ = new Subject();
         this.movie$ = _modelService.selectedMovie$;
         this.form = new MovieForm();
-        this._movieGlobalKey = activatedRoute.snapshot.params.movieGlobalKey;
-
-    }
-
-    ngOnInit() {
-        this._modelService.getSelectedMovie(this._movieGlobalKey)
-            .pipe(takeUntil(this._destroy$)).subscribe((movie: IMovie) => {
-                this.form.updateFormValues(movie);
-            });
+        this._modelService.setSelectedMovie(null);
     }
 
     ngOnDestroy(): void {
@@ -59,9 +49,8 @@ export class MovieEditPageComponent implements OnInit, OnDestroy {
     }
 
     onSave(): void {
-        this._modelService.updateMovie(this.form.value).pipe(takeUntil(this._destroy$)).subscribe(() => {
-            const url = MovieResourcesConstants.MOVIE_DETAILS_PAGE.replace(':movieGlobalKey', this._movieGlobalKey);
-            this._router.navigateByUrl(url);
+        this._modelService.createMovie(this.form.value).pipe(takeUntil(this._destroy$)).subscribe(() => {
+            this._router.navigateByUrl(MovieResourcesConstants.MOVIE_LIST_PAGE);
             this._messages.addSuccessMessage(this._translator.instant('savedSuccesss'))
         });
 
