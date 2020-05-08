@@ -1,15 +1,25 @@
-<div class="movie-edit-page">
-    <div class="movie-edit-page__container">
-        <div class="movie-edit-page__actions">
-            <button class="btn btn--primary movie-edit-page__action"
-                    [title]="'save' | translate"
-                    (click)="onSave()"
-                    [disabled]="isDisable">{{'save' | translate}}</button>
-            <button class="btn btn--secondary movie-edit-page__action"
-                    [title]="'cancel' | translate"
-                    (click)="onCancel()">{{'cancel' | translate}}</button>
+<div class="edit page edit__page">
+    <div class="container edit__container">
+        <div class="header edit__header">
+            <div class="title text-title text-overflow">
+                <span class="title__russian-name"
+                      title="{{(movie$ | async).russianName}}">{{(movie$ | async).russianName}}</span>
+                <span class="title__original-name"
+                      title="{{(movie$ | async).originalName}}">{{(movie$ | async).originalName}}</span>
+            </div>
+            <div class="actions edit__actions">
+                <button class="btn btn--primary "
+                        [title]="'save' | translate"
+                        (click)="onSave()"
+                        [disabled]="isDisable">{{'save' | translate}}</button>
+                <button class="btn btn--secondary actions__edit"
+                        [title]="'cancel' | translate"
+                        (click)="onCancel()">{{'cancel' | translate}}</button>
+            </div>
         </div>
-        <mc-movie-edit-content [movie]="movie$ | async"
-                               [form]="form"></mc-movie-edit-content>
+        <div class="edit__content">
+            <mc-movie-edit-content [movie]="movie$ | async"
+                                   [form]="form"></mc-movie-edit-content>
+        </div>
     </div>
 </div>

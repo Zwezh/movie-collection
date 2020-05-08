@@ -28,6 +28,11 @@ export class MovieStore {
         this._selectedMovie$ = new BehaviorSubject<IMovie>(initialMovieState.movie);
     }
 
+    resetState(): void {
+        this._movieList$.next(initialMovieState.movieCollection);
+        this._selectedMovie$.next(initialMovieState.movie);
+    }
+
     setMovieList(value: Array<IMovie>): void {
         this._movieList$.next(value);
     }

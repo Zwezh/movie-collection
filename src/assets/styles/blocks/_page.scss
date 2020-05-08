@@ -6,6 +6,11 @@
   background-color: $gray-lightest;
 }
 
+.column-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   height: 100%;
   box-sizing: border-box;

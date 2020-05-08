@@ -1,5 +1,4 @@
 .main-content {
   position: relative;
-  height: calc(100vh - 42px);
-  overflow-y: hidden;
+  flex:auto;
 }

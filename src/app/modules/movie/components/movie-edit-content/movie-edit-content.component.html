@@ -3,17 +3,11 @@
         <img class="movie-edit__poster"
              [src]="imageUrl"
              [alt]="'movie.logo' | translate" />
-        <mc-movie-raiting [raiting]="movie.raiting"></mc-movie-raiting>
+        <ng-container *ngIf="movie.raiting">
+            <mc-movie-raiting [raiting]="movie.raiting"></mc-movie-raiting>
+        </ng-container>
     </figure>
     <main class="movie-edit__main">
-        <div class="movie-edit__header">
-            <div class="movie-edit__title text-title text-overflow">
-                <span class="movie-edit__name"
-                      title="{{movie.russianName}}">{{movie.russianName}}</span>
-                <span class="movie-edit__name"
-                      title="{{movie.originalName}}">{{movie.originalName}}</span>
-            </div>
-        </div>
         <form [formGroup]="form">
             <p class="form-control edit-field">
                 <label class="form-control__label edit-field__label"

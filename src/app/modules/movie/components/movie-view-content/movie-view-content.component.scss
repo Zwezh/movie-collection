@@ -5,7 +5,6 @@ $side_width: 400px;
 .container__view {
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .view {
@@ -13,12 +12,22 @@ $side_width: 400px;
     padding-bottom: 10px;
     margin-bottom: 10px;
   }
+
+
+  &__field {
+    line-height: 2rem;
+    height: 2rem;
+  }
+
+  &__label {
+    min-width: 150px;
+  }
 }
 
 .side {
   display: flex;
   flex-direction: column;
-  width: $side_width;
+  flex: 0 0 $side_width;
   box-sizing: border-box;
 }
 
@@ -34,7 +43,8 @@ $side_width: 400px;
   position: relative;
   box-sizing: border-box;
   height: inherit;
-  width: calc(100% - #{$side_width});
+  display: flex;
+  flex-direction: column;
 
   &__side {
     padding-left: 20px;
@@ -50,7 +60,7 @@ $side_width: 400px;
   }
 }
 
-.actions {
+.actions_size {
   width: 60px;
   min-width: 60px;
   text-align: right;
@@ -68,14 +78,5 @@ $side_width: 400px;
 
   &__name+&__name {
     margin-left: 20px;
-  }
-}
-
-.field {
-  line-height: 2rem;
-  height: 2rem;
-
-  &__label {
-    min-width: 150px;
   }
 }

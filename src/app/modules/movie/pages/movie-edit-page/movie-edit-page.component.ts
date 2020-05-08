@@ -2,8 +2,7 @@ import {
     ChangeDetectionStrategy,
     Component,
     OnDestroy,
-    OnInit,
-    ViewEncapsulation
+    OnInit
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessagesStore } from '@appLayouts/messages';
@@ -20,8 +19,7 @@ import { MovieModelService } from '../../shared/services';
     selector: 'mc-movie-edit-page',
     templateUrl: './movie-edit-page.component.html',
     styleUrls: ['./movie-edit-page.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    encapsulation: ViewEncapsulation.None
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MovieEditPageComponent implements OnInit, OnDestroy {
     private _movieGlobalKey: string;

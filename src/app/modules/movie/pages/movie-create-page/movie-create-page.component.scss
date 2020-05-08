@@ -1,27 +1,31 @@
 @import "./../../../../../assets/styles/colors";
 
-.movie-edit-page {
-  box-sizing: border-box;
-  height: 100%;
-  background-color: $gray-lightest;
-  padding: 20px;
+.create {
+  &__page {
+    padding: 20px;
+  }
 
   &__container {
-    height: 100%;
-    box-sizing: border-box;
-    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    background-color: $white;
-    border: 1px solid $gray-lighter;
   }
 
   &__actions {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
     margin-bottom: 20px;
   }
-  &__action + &__action {
+
+  &__content {
+    flex: auto;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  &__edit {
     margin-left: 10px;
   }
 }

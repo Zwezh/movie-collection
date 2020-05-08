@@ -6,13 +6,12 @@ $label_width: 185px;
 .movie-edit {
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
 
   &__side {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: $side_width;
+    flex: 0 0 $side_width;
     box-sizing: border-box;
     padding: 0 20px;
   }
@@ -27,8 +26,8 @@ $label_width: 185px;
     position: relative;
     box-sizing: border-box;
     height: inherit;
-    width: calc(100% - #{$side_width});
     padding-left: 20px;
+    flex: auto;
 
     &:before {
       content: '';
@@ -45,19 +44,6 @@ $label_width: 185px;
     width: 60px;
     min-width: 60px;
     text-align: right;
-  }
-
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid $gray-lighter;
-  }
-
-  &__name+&__name {
-    margin-left: 20px;
   }
 }
 

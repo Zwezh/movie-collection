@@ -5,7 +5,7 @@
              [alt]="'movie.logo' | translate" />
         <mc-movie-raiting [raiting]="movie.raiting"></mc-movie-raiting>
     </figure>
-    <main class="main main__side">
+    <main class="main main__side text-overflow">
         <div class="header view__header">
             <div class="title text-title text-overflow">
                 <span class="title__name"
@@ -13,7 +13,7 @@
                 <span class="title__name"
                       title="{{movie.originalName}}">{{movie.originalName}}</span>
             </div>
-            <div class="actions header__actions text-description">
+            <div class="actions header__actions actions_size text-description">
                 <a [routerLink]="movieListPage"
                    class="text-title"
                    title="{{'back' | translate}}"><i class="las la-arrow-alt-circle-left"></i></a>
@@ -22,48 +22,48 @@
                    title="{{'editMovie' | translate}}"><i class="las la-pen"></i></a>
             </div>
         </div>
-        <mc-list-item fieldClass="field"
-                      labelClass="field__label text-description"
+        <mc-list-item fieldClass="view__field"
+                      labelClass="view__label text-description"
                       valueClass="text-description"
                       [label]="'movie.year' | translate"
                       [value]="movie.year"></mc-list-item>
-        <mc-list-item fieldClass="field"
-                      labelClass="field__label text-description"
+        <mc-list-item fieldClass="view__field"
+                      labelClass="view__label text-description"
                       valueClass="text-description"
                       [label]="'movie.country' | translate"
                       [value]="movie.country"></mc-list-item>
-        <mc-list-item fieldClass="field"
-                      labelClass="field__label text-description"
+        <mc-list-item fieldClass="view__field"
+                      labelClass="view__label text-description"
                       valueClass="text-description"
                       [label]="'movie.duration' | translate"
                       [value]="movie.duration"></mc-list-item>
-        <mc-list-item fieldClass="field"
-                      labelClass="field__label text-description"
+        <mc-list-item fieldClass="view__field"
+                      labelClass="view__label text-description"
                       valueClass="text-description"
                       [label]="'movie.genre' | translate"
                       [value]="movie.genre"></mc-list-item>
-        <mc-list-item fieldClass="field"
-                      labelClass="field__label text-description"
+        <mc-list-item fieldClass="view__field"
+                      labelClass="view__label text-description"
                       valueClass="text-description"
                       [label]="'movie.director' | translate"
                       [value]="movie.director"></mc-list-item>
-        <mc-list-item fieldClass="field"
-                      labelClass="field__label text-description"
+        <mc-list-item fieldClass="view__field"
+                      labelClass="view__label text-description"
                       valueClass="text-description"
                       [label]="'movie.actors' | translate"
                       [value]="movie.actors"></mc-list-item>
-        <mc-list-item fieldClass="field"
-                      labelClass="field__label text-description"
+        <mc-list-item fieldClass="view__field"
+                      labelClass="view__label text-description"
                       valueClass="text-description"
                       [label]="'movie.translation' | translate"
                       [value]="movie.translation"></mc-list-item>
-        <mc-list-item fieldClass="field"
-                      labelClass="field__label text-description"
+        <mc-list-item fieldClass="view__field"
+                      labelClass="view__label text-description"
                       valueClass="text-description"
                       [label]="'movie.quality' | translate"
                       [value]="movie.quality"></mc-list-item>
-        <mc-list-item fieldClass="field"
-                      labelClass="field__label text-description"
+        <mc-list-item fieldClass="view__field"
+                      labelClass="view__label text-description"
                       valueClass="text-description"
                       [label]="'movie.more' | translate"
                       [value]="movie.more"></mc-list-item>

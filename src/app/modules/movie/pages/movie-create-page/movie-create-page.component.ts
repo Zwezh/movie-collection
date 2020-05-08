@@ -1,10 +1,9 @@
 import {
     ChangeDetectionStrategy,
     Component,
-    OnDestroy,
-    ViewEncapsulation
+    OnDestroy
 } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { MessagesStore } from '@appLayouts/messages';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable, Subject } from 'rxjs';
@@ -18,8 +17,7 @@ import { MovieModelService } from '../../shared/services';
 @Component({
     templateUrl: './movie-create-page.component.html',
     styleUrls: ['./movie-create-page.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    encapsulation: ViewEncapsulation.None
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MovieCreatePageComponent implements OnDestroy {
     private _movieGlobalKey: string;
@@ -35,12 +33,11 @@ export class MovieCreatePageComponent implements OnDestroy {
         private _modelService: MovieModelService,
         private _router: Router,
         private _messages: MessagesStore,
-        private _translator: TranslateService,
-        activatedRoute: ActivatedRoute) {
+        private _translator: TranslateService) {
         this._destroy$ = new Subject();
         this.movie$ = _modelService.selectedMovie$;
         this.form = new MovieForm();
-        this._modelService.setSelectedMovie(null);
+        // this._modelService.setSelectedMovie(null);
     }
 
     ngOnDestroy(): void {
@@ -57,7 +54,6 @@ export class MovieCreatePageComponent implements OnDestroy {
     }
 
     onCancel(): void {
-        const url = MovieResourcesConstants.MOVIE_DETAILS_PAGE.replace(':movieGlobalKey', this._movieGlobalKey);
-        this._router.navigateByUrl(url);
+        this._router.navigateByUrl(MovieResourcesConstants.MOVIE_LIST_PAGE);
     }
 }

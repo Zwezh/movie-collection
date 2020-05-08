@@ -29,6 +29,7 @@ export class MovieModelService {
     }
 
     getMovieCollection(): Observable<any> {
+        this._store.resetState();
         return this._apiService.getMovieCollection().pipe(
             tap((response: Array<MovieDto>) => this._store.setMovieList(response))
         );
@@ -56,10 +57,7 @@ export class MovieModelService {
     }
 
     createMovie(formValue: Partial<IMovie>): Observable<any> {
-        return this._apiService.addMovie(formValue as IMovie).pipe(
-            tap((response: MovieDto) => {
-                this._store.setSelectedMovie(response)
-            }));
+        return this._apiService.addMovie(formValue as IMovie);
     }
 
     private findMovieByGlobalKey(movieGlobalKey): IMovie {

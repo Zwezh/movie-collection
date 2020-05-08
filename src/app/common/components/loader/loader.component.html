@@ -1,5 +1,5 @@
 <div class="loading-screen-wrapper"
-     *ngIf="loading">
+     *ngIf="this.loading$ | async">
     <div class="loading-screen-icon">
         <div class="blobs">
             <div class="blob-center"></div>

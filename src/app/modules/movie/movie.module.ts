@@ -28,6 +28,8 @@ import {
     MovieListPageComponent,
     MovieViewPageComponent
 } from './pages';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoadingScreenInterceptor } from 'app/common/interceptors/loading.interceptor';
 
 const COMPONENTS = [
     MovieActionsComponent,
@@ -55,7 +57,12 @@ const COMPONENTS = [
     providers: [
         MovieStore,
         MovieModelService,
-        MovieApiService
+        MovieApiService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: LoadingScreenInterceptor,
+            multi: true
+        }
     ]
 })
 export class MovieModule { }

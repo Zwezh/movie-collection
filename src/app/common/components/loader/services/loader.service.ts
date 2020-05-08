@@ -1,31 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { Store } from '@appShared';
 
 @Injectable({
     providedIn: 'root'
 })
 export class LoaderService {
 
-    private _loading: boolean;
-    get loading(): boolean {
-        return this._loading;
+    private _loading$: Store<boolean>;
+    get loading$() {
+        return this._loading$.state$;
     }
-    set loading(value) {
-        this._loading = value;
-        this.loadingStatus.next(value);
-    }
+
     loadingStatus: Subject<boolean>;
 
     constructor() {
-        this._loading = false;
-        this.loadingStatus = new Subject();
+        this._loading$ = new Store<boolean>(false);
     }
 
     startLoading(): void {
-        this.loading = true;
+        this._loading$.setState(true);
     }
 
     stopLoading(): void {
-        this.loading = false;
+        this._loading$.setState(false);
     }
 }

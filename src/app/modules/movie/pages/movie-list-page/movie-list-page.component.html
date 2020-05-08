@@ -1,4 +1,4 @@
-<div class="page"
+<div class="page movies__page"
      *ngIf="(movieList$ | async).length > 0; else hasNoItems;">
     <mc-movie-actions #actions></mc-movie-actions>
     <cdk-virtual-scroll-viewport class="movie-list"

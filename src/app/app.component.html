@@ -1,8 +1,10 @@
 <mc-loader></mc-loader>
-<mc-app-header></mc-app-header>
-<main class="main-content"
-      [@routerTransition]="getState(o)">
-    <mc-activity-panel></mc-activity-panel>
-    <router-outlet #o="outlet"></router-outlet>
-</main>
+<div class="page column-container">
+    <mc-app-header></mc-app-header>
+    <main class="main-content"
+          [@routerTransition]="getState(o)">
+        <mc-activity-panel></mc-activity-panel>
+        <router-outlet #o="outlet"></router-outlet>
+    </main>
+</div>
 <mc-messages></mc-messages>

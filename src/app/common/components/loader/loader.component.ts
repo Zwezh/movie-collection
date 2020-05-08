@@ -1,11 +1,8 @@
 import {
     ChangeDetectionStrategy,
-    ChangeDetectorRef,
-    Component,
-    OnDestroy,
-    OnInit
+    Component
 } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { LoaderService } from './services/loader.service';
 
@@ -15,26 +12,14 @@ import { LoaderService } from './services/loader.service';
     styleUrls: ['./loader.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoaderComponent implements OnInit, OnDestroy {
-    private _loadingSubscription: Subscription;
+export class LoaderComponent {
 
     loading: boolean;
+    loading$: Observable<boolean>;
 
     constructor(
-        private _changeDetector: ChangeDetectorRef,
-        private _loaderService: LoaderService
+        loaderService: LoaderService
     ) {
-        this.loading = false;
-    }
-
-    ngOnInit() {
-        this._loadingSubscription = this._loaderService.loadingStatus.subscribe((value) => {
-            this.loading = value;
-            this._changeDetector.detectChanges();
-        });
-    }
-
-    ngOnDestroy() {
-        this._loadingSubscription.unsubscribe();
+        this.loading$ = loaderService.loading$;
     }
 }
