@@ -10,7 +10,7 @@ export class MovieActionsConstants {
     static readonly ORDER = [
         'russianName',
         'originalName',
-        'raiting',
+        'rating',
         'country',
         'director',
         'genre',

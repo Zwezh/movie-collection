@@ -1,8 +1,10 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ListItemModule } from '@appComponents/list-item';
 import { ValidationMessagesModule } from '@appComponents/validation-message';
 import { SharedModule } from '@appSharedModule';
+import { LoadingScreenInterceptor } from 'app/common/interceptors/loading.interceptor';
 
 import { MovieStore } from './shared/movie.store';
 import {
@@ -18,7 +20,7 @@ import {
     MovieActionsComponent,
     MovieEditContentComponent,
     MovieItemComponent,
-    MovieRaitingComponent,
+    MovieRatingComponent,
     MovieViewContentComponent
 } from './components';
 import { MovieRoutingModule } from './movie-routing.module';
@@ -28,8 +30,6 @@ import {
     MovieListPageComponent,
     MovieViewPageComponent
 } from './pages';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { LoadingScreenInterceptor } from 'app/common/interceptors/loading.interceptor';
 
 const COMPONENTS = [
     MovieActionsComponent,
@@ -40,7 +40,7 @@ const COMPONENTS = [
     MovieCreatePageComponent,
     MovieViewContentComponent,
     MovieEditContentComponent,
-    MovieRaitingComponent,
+    MovieRatingComponent,
     MovieFilterPipe,
     MovieOrderByPipe
 ]

@@ -3,8 +3,8 @@
         <img class="movie-edit__poster"
              [src]="imageUrl"
              [alt]="'movie.logo' | translate" />
-        <ng-container *ngIf="movie.raiting">
-            <mc-movie-raiting [raiting]="movie.raiting"></mc-movie-raiting>
+        <ng-container *ngIf="movie.rating">
+            <mc-movie-rating [rating]="movie.rating"></mc-movie-rating>
         </ng-container>
     </figure>
     <main class="movie-edit__main">
@@ -36,12 +36,12 @@
             </p>
             <p class="form-control edit-field">
                 <label class="form-control__label edit-field__label"
-                       title="{{'movie.raiting' | translate}}">{{'movie.raiting' | translate}}</label>
+                       title="{{'movie.rating' | translate}}">{{'movie.rating' | translate}}</label>
                 <input class="form-control__input edit-field__input"
-                       formControlName="raiting"
+                       formControlName="rating"
                        type="text">
             </p>
-            <mc-validation-messages [control]="form.raiting"
+            <mc-validation-messages [control]="form.rating"
                                     [required]="'errors.required' | translate"> </mc-validation-messages>
             <p class="form-control edit-field">
                 <label class="form-control__label edit-field__label"

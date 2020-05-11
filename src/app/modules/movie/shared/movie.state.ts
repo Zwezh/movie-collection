@@ -15,7 +15,7 @@ export const initialMovieState: IMovieState = {
         more: '',
         originalName: '',
         quality: '',
-        raiting: null,
+        rating: null,
         russianName: '',
         translation: '',
         year: null

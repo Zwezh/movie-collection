@@ -40,13 +40,6 @@ export function HttpLoaderFactory(http: HttpClient) {
         AppHeaderModule,
         MessagesModule
     ],
-    providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: LoadingScreenInterceptor,
-            multi: true
-        }
-    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,10 @@
+<div class="movie-rating text-biggest text-rating"
+     [title]="rating">
+    <div class="movie-rating__stars">
+        <ng-container *ngFor="let item of ratingStarCollection">
+            <i class="la-star"
+               [ngClass]="item"></i>
+        </ng-container>
+    </div>
+    {{rating}}
+</div>

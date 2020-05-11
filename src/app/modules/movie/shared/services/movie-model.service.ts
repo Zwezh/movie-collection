@@ -1,11 +1,11 @@
-import { Injectable, Pipe } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 import { MovieDto } from '../dto';
 import { IMovie } from '../interfaces';
-import { MovieApiService } from './api/movie-api.service';
 import { MovieStore } from '../movie.store';
+import { MovieApiService } from './api/movie-api.service';
 
 
 @Injectable()

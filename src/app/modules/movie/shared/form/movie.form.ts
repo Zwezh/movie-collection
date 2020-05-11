@@ -35,8 +35,8 @@ export class MovieForm extends FormGroup {
     get quality(): FormControl {
         return this.get('quality') as FormControl;
     }
-    get raiting(): FormControl {
-        return this.get('raiting') as FormControl;
+    get rating(): FormControl {
+        return this.get('rating') as FormControl;
     }
     get russianName(): FormControl {
         return this.get('russianName') as FormControl;
@@ -59,7 +59,7 @@ export class MovieForm extends FormGroup {
             more: new FormControl('', Validators.required),
             originalName: new FormControl('', Validators.required),
             quality: new FormControl('', Validators.required),
-            raiting: new FormControl('', Validators.required),
+            rating: new FormControl('', Validators.required),
             russianName: new FormControl('', Validators.required),
             translation: new FormControl('', Validators.required),
             year: new FormControl('', Validators.compose([Validators.required, Validators.minLength(4)]))
@@ -78,7 +78,7 @@ export class MovieForm extends FormGroup {
                 more: movie.more,
                 originalName: movie.originalName,
                 quality: movie.quality,
-                raiting: movie.raiting,
+                rating: movie.rating,
                 russianName: movie.russianName,
                 translation: movie.translation,
                 year: movie.year

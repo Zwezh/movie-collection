@@ -9,7 +9,7 @@
         "more": "HDD1/Фильмы/Один дома",
         "originalName": "Home Alone",
         "quality": "BDRip720p",
-        "raiting": "8.238",
+        "rating": "8.238",
         "russianName": "Один дома",
         "translation": "MVO (многоголосный закадровый)",
         "year": "1990"
@@ -24,7 +24,7 @@
         "more": "HDD1/Фильмы/Один дома",
         "originalName": "Home Alone 2: Lost in New York",
         "quality": "BDRip720p",
-        "raiting": "7.947",
+        "rating": "7.947",
         "russianName": "Один дома 2: Затерянный в Нью-Йорке",
         "translation": "Dub (дублированный)",
         "year": "1992"
@@ -39,7 +39,7 @@
         "more": "HDD1/Фильмы/Один дома",
         "originalName": "Home Alone 3",
         "quality": "HDTVRip-AVC",
-        "raiting": "5.678",
+        "rating": "5.678",
         "russianName": "Один дома 3",
         "translation": "MVO(многоголосый, закадровый)",
         "year": "1997"
@@ -54,7 +54,7 @@
         "more": "HDD1/Фильмы/Красавчик",
         "originalName": "Keinohrhasen",
         "quality": "BDRip720p",
-        "raiting": "7.533",
+        "rating": "7.533",
         "russianName": "Красавчик",
         "translation": "Dub(дублированный)",
         "year": "2007"
@@ -69,7 +69,7 @@
         "more": "HDD1/Фильмы/Красавчик",
         "originalName": "Zweiohrküken",
         "quality": "BDRip720p",
-        "raiting": "7.148",
+        "rating": "7.148",
         "russianName": "Красавчик 2",
         "translation": "Dub(дублированный)",
         "year": "2009"
@@ -84,7 +84,7 @@
         "more": "HDD1/Фильмы/Спуск",
         "originalName": "The Descent",
         "quality": "BDRip1080p",
-        "raiting": "6.851",
+        "rating": "6.851",
         "russianName": "Спуск",
         "translation": "Dub(дублированный)",
         "year": "2005"
@@ -99,7 +99,7 @@
         "more": "HDD1/Фильмы/Спуск",
         "originalName": "The Descent: Part 2",
         "quality": "BDRip720p",
-        "raiting": "5.991",
+        "rating": "5.991",
         "russianName": "Спуск 2",
         "translation": "Dub(дублированный)",
         "year": "2009"
@@ -114,7 +114,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "DragonHeart",
         "quality": "BDRip720p",
-        "raiting": "7.755",
+        "rating": "7.755",
         "russianName": "Сердце дракона",
         "translation": "MVO(многоголосный, закадровый)",
         "year": "1996"
@@ -129,7 +129,7 @@
         "more": "HDD1/Фильмы/Мальчишник в Вегасе",
         "originalName": "The Hangover",
         "quality": "BDRip1080p",
-        "raiting": "7.888",
+        "rating": "7.888",
         "russianName": "Мальчишник в Вегасе",
         "translation": "Dub(дублированный)",
         "year": "2009"
@@ -144,7 +144,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "The Ring",
         "quality": "BDRip720p",
-        "raiting": "7.297",
+        "rating": "7.297",
         "russianName": "Звонок",
         "translation": "Dub(дублированный)",
         "year": "2002"
@@ -159,7 +159,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Safe",
         "quality": "BDRip1080p",
-        "raiting": "6.676",
+        "rating": "6.676",
         "russianName": "Защитник",
         "translation": "Dub(дублированный)",
         "year": "2012"
@@ -174,7 +174,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "John Carter",
         "quality": "BDRip1080p",
-        "raiting": "6.954",
+        "rating": "6.954",
         "russianName": "Джон Картер",
         "translation": "Dub(дублированный)",
         "year": "2012"
@@ -189,7 +189,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Accepted",
         "quality": "BDRip1080p",
-        "raiting": "6.907",
+        "rating": "6.907",
         "russianName": "Нас приняли!",
         "translation": "Dub(дублированный)",
         "year": "2006"
@@ -204,7 +204,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "In Bruges",
         "quality": "BDRip1080p",
-        "raiting": "7.737",
+        "rating": "7.737",
         "russianName": "Залечь на дно в Брюгге",
         "translation": "Dub(дублированный)",
         "year": "2007"
@@ -219,7 +219,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Taking Lives",
         "quality": "BDRip1080p",
-        "raiting": "7.245",
+        "rating": "7.245",
         "russianName": "Забирая жизни",
         "translation": "Dub(дублированный)",
         "year": "2004"
@@ -234,7 +234,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Artificial Intelligence: AI",
         "quality": "BDRip1080p",
-        "raiting": "7.933",
+        "rating": "7.933",
         "russianName": "Искусственный разум",
         "translation": "Dub(дублированный)",
         "year": "2001"
@@ -249,7 +249,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Phone Booth",
         "quality": "BDRip1080p",
-        "raiting": "7.684",
+        "rating": "7.684",
         "russianName": "Телефонная будка",
         "translation": "Dub(дублированный)",
         "year": "2002"
@@ -264,7 +264,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Coriolanus",
         "quality": "BDRip1080p",
-        "raiting": "8.099",
+        "rating": "8.099",
         "russianName": "Кориолан",
         "translation": "Dub(дублированный)",
         "year": "2013"
@@ -279,7 +279,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "The Game",
         "quality": "BDRip1080p",
-        "raiting": "8.272",
+        "rating": "8.272",
         "russianName": "Игра",
         "translation": "MVO (многоголосный, закадровый)",
         "year": "1997"
@@ -294,7 +294,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Valkyrie",
         "quality": "BDRip1080p",
-        "raiting": "7.397",
+        "rating": "7.397",
         "russianName": "Операция «Валькирия»",
         "translation": "Dub(дублированный)",
         "year": "2008"
@@ -309,7 +309,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Attack on Leningrad",
         "quality": "BDRip1080p",
-        "raiting": "6.872",
+        "rating": "6.872",
         "russianName": "Ленинград",
         "translation": "Оригинал, субтитры",
         "year": "2007"
@@ -324,7 +324,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "300",
         "quality": "BDRip1080p",
-        "raiting": "7.632",
+        "rating": "7.632",
         "russianName": "300 спартанцев",
         "translation": "Dub(дублированный)",
         "year": "2007"
@@ -339,7 +339,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "The Descendants",
         "quality": "BDRip720p",
-        "raiting": "6.882",
+        "rating": "6.882",
         "russianName": "Потомки",
         "translation": "Dub(дублированный)",
         "year": "2011"
@@ -354,7 +354,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Avatar [Extended edtion]",
         "quality": "BDRip1080p",
-        "raiting": "7.962",
+        "rating": "7.962",
         "russianName": "Аватар [Расширенная версия]",
         "translation": "Dub(дублированный)",
         "year": "2009"
@@ -369,7 +369,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Pulse",
         "quality": "BDRip720p",
-        "raiting": "6.111",
+        "rating": "6.111",
         "russianName": "Пульс",
         "translation": "Dub(дублированный)",
         "year": "2006"
@@ -384,7 +384,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "The Italian Job",
         "quality": "BDRip1080p",
-        "raiting": "7.615",
+        "rating": "7.615",
         "russianName": "Ограбление по-итальянски",
         "translation": "Dub(дублированный)",
         "year": "2003"
@@ -399,7 +399,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Moulin Rouge!",
         "quality": "BDRip720p",
-        "raiting": "7.858",
+        "rating": "7.858",
         "russianName": "Мулен Руж",
         "translation": "Dub(дублированный)",
         "year": "2001"
@@ -414,7 +414,7 @@
         "more": "HDD1/Фильмы",
         "originalName": "Perfect Sense",
         "quality": "BDRip1080p",
-        "raiting": "7.662",
+        "rating": "7.662",
         "russianName": "Последняя любовь на Земле",
         "translation": "MVO (многоголосный, закадровый)",
         "year": "2010"

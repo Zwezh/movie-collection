@@ -8,7 +8,7 @@ export class CreateMovieDto {
     more: string;
     originalName: string;
     quality: string;
-    raiting: number;
+    rating: number;
     russianName: string;
     translation: string;
     year: number;
