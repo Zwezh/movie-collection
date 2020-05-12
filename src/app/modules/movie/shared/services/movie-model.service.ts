@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
+import { MovieApiService } from '@appApi';
+import { CreateMovieDto, MovieDto } from '@appApi/movies/dto';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
-import { MovieDto } from '../dto';
 import { IMovie } from '../interfaces';
 import { MovieStore } from '../movie.store';
-import { MovieApiService } from './api/movie-api.service';
 
 
 @Injectable()
@@ -57,7 +57,7 @@ export class MovieModelService {
     }
 
     createMovie(formValue: Partial<IMovie>): Observable<any> {
-        return this._apiService.addMovie(formValue as IMovie);
+        return this._apiService.addMovie(formValue as CreateMovieDto);
     }
 
     private findMovieByGlobalKey(movieGlobalKey): IMovie {

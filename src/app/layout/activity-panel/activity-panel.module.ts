@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { HeaderModule } from '@appComponents/header';
+import { HeaderModule } from '@appComponents';
 
 import { ActivityContentHostComponent } from './components/activity-content-host.component';
 import { ActivityPanelComponent } from './components/activity-panel.component';

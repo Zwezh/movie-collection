@@ -4,7 +4,7 @@ import {
     OnDestroy,
     OnInit
 } from '@angular/core';
-import { LoaderService } from '@appComponents/loader/services/loader.service';
+import { LoaderService } from '@appComponents';
 import {
     LangChangeEvent,
     TranslateService

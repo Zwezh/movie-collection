@@ -1,10 +1,13 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { ListItemModule } from '@appComponents/list-item';
-import { ValidationMessagesModule } from '@appComponents/validation-message';
+import { MovieApiService } from '@appApi';
+import {
+    ListItemModule,
+    ValidationMessagesModule
+} from '@appComponents';
+import { LoadingScreenInterceptor } from '@appInterceptors';
 import { SharedModule } from '@appSharedModule';
-import { LoadingScreenInterceptor } from 'app/common/interceptors/loading.interceptor';
 
 import { MovieStore } from './shared/movie.store';
 import {
@@ -12,7 +15,6 @@ import {
     MovieOrderByPipe
 } from './shared/pipes';
 import {
-    MovieApiService,
     MovieModelService
 } from './shared/services';
 

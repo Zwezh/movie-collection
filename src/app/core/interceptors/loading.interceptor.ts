@@ -5,7 +5,7 @@ import {
     HttpRequest
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LoaderService } from '@appComponents/loader';
+import { LoaderService } from '@appComponents';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
 
