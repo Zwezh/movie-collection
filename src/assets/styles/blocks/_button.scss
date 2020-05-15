@@ -1,0 +1,68 @@
+@import "../colors";
+
+.btn {
+  font-size: 1.1em;
+  color: $white;
+  border: 1px solid $gray-lighter;
+  padding: 0 20px;
+  height: 2.15rem;
+  line-height: 2.15rem;
+  box-sizing: border-box;
+  font-weight: 100;
+  transition: opacity 0.2s ease-in-out;
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &-info {
+    background-color: $info;
+  }
+
+  &-secondary {
+    background-color: $white;
+    color: $primary;
+    box-shadow: inset 0px 0px 0px 1px $primary;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-success {
+    background-color: $success;
+  }
+
+  &:hover {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background-color: $gray-lighter;
+    color: $gray-light;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    border: 1px solid $gray-light;
+  }
+
+}
+
+.btn-icon {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  &:focus {
+    border: none;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: $gray-lighter;
+    cursor: not-allowed;
+  }
+}

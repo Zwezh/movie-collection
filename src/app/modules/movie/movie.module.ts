@@ -1,7 +1,10 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { MovieApiService } from '@appApi';
+import {
+    KinopoiskApiService,
+    MovieApiService
+} from '@appApi';
 import {
     ListItemModule,
     ValidationMessagesModule
@@ -60,6 +63,7 @@ const COMPONENTS = [
         MovieStore,
         MovieModelService,
         MovieApiService,
+        KinopoiskApiService,
         {
             provide: HTTP_INTERCEPTORS,
             useClass: LoadingScreenInterceptor,

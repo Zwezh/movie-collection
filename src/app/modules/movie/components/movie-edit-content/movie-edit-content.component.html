@@ -14,7 +14,18 @@
                        title="{{'movie.id' | translate}}">{{'movie.id' | translate}}</label>
                 <input class="form-control__input edit-field__input"
                        formControlName="id"
-                       type="text">
+                       type="number">
+                <button class="btn btn-icon _offset"
+                        [title]="'loadFromKinopoisk' | translate"
+                        (click)="onLoadFromKinopoisk()"
+                        [disabled]="isDisableLoad"><i class="las la-cloud-download-alt icon"></i></button>
+                <button class="btn btn-icon  _offset"
+                        [title]="'loadPosterFromKinopoisk' | translate"
+                        (click)="onLoadPoster()"
+                        [disabled]="isDisableLoad"><i class="las la-file-video icon"></i></button>
+
+
+
             </p>
             <mc-validation-messages [control]="form.id"
                                     [required]="'errors.required' | translate"></mc-validation-messages>
@@ -34,12 +45,14 @@
                        formControlName="originalName"
                        type="text">
             </p>
+            <mc-validation-messages [control]="form.originalName"
+                                    [required]="'errors.required' | translate"></mc-validation-messages>
             <p class="form-control edit-field">
                 <label class="form-control__label edit-field__label"
                        title="{{'movie.rating' | translate}}">{{'movie.rating' | translate}}</label>
                 <input class="form-control__input edit-field__input"
                        formControlName="rating"
-                       type="text">
+                       type="number">
             </p>
             <mc-validation-messages [control]="form.rating"
                                     [required]="'errors.required' | translate"> </mc-validation-messages>
@@ -48,11 +61,11 @@
                        title="{{'movie.year' | translate}}">{{'movie.year' | translate}}</label>
                 <input class="form-control__input edit-field__input"
                        formControlName="year"
-                       type="text">
+                       type="number">
             </p>
             <mc-validation-messages [control]="form.year"
                                     [required]="'errors.required' | translate"
-                                    [minLength]="'errors.minLength' | translate"> </mc-validation-messages>
+                                    [min]="'errors.min' | translate"> </mc-validation-messages>
             <p class="form-control edit-field">
                 <label class="form-control__label edit-field__label"
                        title="{{'movie.country' | translate}}">{{'movie.country' | translate}}</label>
@@ -125,6 +138,13 @@
             </p>
             <mc-validation-messages [control]="form.more"
                                     [required]="'errors.required' | translate"></mc-validation-messages>
+            <p class="form-control edit-field">
+                <label class="form-control__label edit-field__label"
+                       title="{{'movie.description' | translate}}">{{'movie.description' | translate}}</label>
+                <textarea class="form-control__input edit-field__input form-control__textarea"
+                          rows="5"
+                          formControlName="description"></textarea>
+            </p>
         </form>
     </main>
 </div>

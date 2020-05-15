@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { MovieApiService } from '@appApi';
+import {
+    KinopoiskApiService,
+    MovieApiService
+} from '@appApi';
+import { KinopoiskDto } from '@appApi/kinopoisk/dto/kinopoisk.dto';
 import { CreateMovieDto, MovieDto } from '@appApi/movies/dto';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -21,6 +25,7 @@ export class MovieModelService {
 
     constructor(
         private _apiService: MovieApiService,
+        private _kinopoiskApiService: KinopoiskApiService,
         private _store: MovieStore
     ) { }
 
@@ -58,6 +63,14 @@ export class MovieModelService {
 
     createMovie(formValue: Partial<IMovie>): Observable<any> {
         return this._apiService.addMovie(formValue as CreateMovieDto);
+    }
+
+    loadMovieFromKinopoisk(id: number): Observable<KinopoiskDto> {
+        return this._kinopoiskApiService.getById(id);
+    }
+
+    loadPoster(id: number): Observable<KinopoiskDto> {
+        return this._kinopoiskApiService.loadPoster(id);
     }
 
     private findMovieByGlobalKey(movieGlobalKey): IMovie {

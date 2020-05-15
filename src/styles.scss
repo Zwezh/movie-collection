@@ -4,6 +4,7 @@
 @import "./assets/styles/blocks/form-control";
 @import "./assets/styles/blocks/page";
 @import "./assets/styles/blocks/text";
+@import "./assets/styles/blocks/button";
 
 html,
 body {
@@ -17,7 +18,7 @@ body {
 
 input,
 select,
-button {
+textarea {
   font-family: Roboto, sans-serif;
   font-size: 1.1em;
   color: $gray-light;
@@ -31,30 +32,10 @@ button {
   &:focus {
     border: 1px solid $gray-light;
   }
-}
 
-.btn {
-  padding: 0 20px;
-  transition: opacity 0.2s ease-in-out;
-
-  &--primary {
-    background-color: $info;
-    color: $white;
-  }
-
-  &--secondary {
-    background-color: $white;
-    color: $info;
-    box-shadow: inset 0px 0px 0px 1px $info;
-  }
-  &:hover {
-      transition: opacity 0.2s ease-in-out;
-      opacity: 0.8;
-  }
-  &:disabled {
-    background-color: $gray-lighter;
-    color: $gray-light;
-    cursor: not-allowed;
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 
@@ -72,7 +53,6 @@ a {
 }
 
 .icon {
-  cursor: pointer;
   color: $primary;
   transition: all 0.3s ease-out;
   font-size: 1.5em;

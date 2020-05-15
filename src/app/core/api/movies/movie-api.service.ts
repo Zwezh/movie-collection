@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { ApiService } from '../api.service';
+import { BaseApiService } from '../base-api.service';
 
 import {
     CreateMovieDto,
@@ -10,7 +10,7 @@ import {
 } from './dto';
 
 @Injectable()
-export class MovieApiService extends ApiService {
+export class MovieApiService extends BaseApiService {
 
     private _movieUrl: string;
 

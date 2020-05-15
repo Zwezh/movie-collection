@@ -18,5 +18,6 @@ export class ValidationMessagesComponent {
     @Input() equalValues: string;
     @Input() dateTimeInvalid: string;
     @Input() max: string;
+    @Input() min: string;
     @Input() other: string;
 }

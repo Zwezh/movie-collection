@@ -18,7 +18,8 @@
         "quality": "Quality",
         "translation": "Translation",
         "year": "Year",
-        "logo": "Poster"
+        "logo": "Poster",
+        "description": "Description"
     },
     "back": "Return to list",
     "editMovie": "Edit movie",
@@ -29,10 +30,13 @@
     "order": "Order",
     "hasNoMovies": "Has no movies",
     "save": "Save",
+    "loadFromKinopoisk": "Load movie from Kinopoisk",
+    "loadPosterFromKinopoisk": "Load poster from Kinopoisk",
     "cancel": "Cancel",
     "savedSuccesss": "The movie was successfully saved",
+    "loadKinopoiskSuccesss": "The movie was successfully loaded from Kinopoisk",
     "errors": {
         "required": "This field is required",
-        "minLength": "This field is too short"
+        "min": "The date is too early"
     }
 }

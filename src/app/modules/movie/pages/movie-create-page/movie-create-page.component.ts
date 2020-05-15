@@ -4,6 +4,7 @@ import {
     OnDestroy
 } from '@angular/core';
 import { Router } from '@angular/router';
+import { KinopoiskDto } from '@appApi/kinopoisk/dto/kinopoisk.dto';
 import { MessagesStore } from '@appLayouts/messages';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable, Subject } from 'rxjs';
@@ -20,7 +21,6 @@ import { MovieModelService } from '../../shared/services';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MovieCreatePageComponent implements OnDestroy {
-    private _movieGlobalKey: string;
     private _destroy$: Subject<void>;
     private form: MovieForm;
     movie$: Observable<IMovie>;
@@ -37,7 +37,6 @@ export class MovieCreatePageComponent implements OnDestroy {
         this._destroy$ = new Subject();
         this.movie$ = _modelService.selectedMovie$;
         this.form = new MovieForm();
-        // this._modelService.setSelectedMovie(null);
     }
 
     ngOnDestroy(): void {

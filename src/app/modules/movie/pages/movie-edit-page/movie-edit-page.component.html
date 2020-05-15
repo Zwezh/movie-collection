@@ -8,11 +8,11 @@
                       title="{{(movie$ | async).originalName}}">{{(movie$ | async).originalName}}</span>
             </div>
             <div class="actions edit__actions">
-                <button class="btn btn--primary "
+                <button class="btn btn-primary "
                         [title]="'save' | translate"
                         (click)="onSave()"
                         [disabled]="isDisable">{{'save' | translate}}</button>
-                <button class="btn btn--secondary actions__edit"
+                <button class="btn btn-secondary actions__edit"
                         [title]="'cancel' | translate"
                         (click)="onCancel()">{{'cancel' | translate}}</button>
             </div>

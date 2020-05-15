@@ -1,6 +1,7 @@
 import {
     ChangeDetectionStrategy,
-    Component
+    Component,
+    Input
 } from '@angular/core';
 
 @Component({
@@ -9,4 +10,6 @@ import {
     styleUrls: ['./header.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent { }
+export class HeaderComponent {
+    @Input() type: string;
+}

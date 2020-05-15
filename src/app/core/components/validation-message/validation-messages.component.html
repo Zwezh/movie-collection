@@ -37,6 +37,11 @@
         {{max}}
     </div>
     <div class="validation__message-error"
+         *ngIf="control.errors.min"
+         [@fadeInContentByOpacity]>
+        {{min}}
+    </div>
+    <div class="validation__message-error"
          *ngIf="control.errors.other"
          [@fadeInContentByOpacity]>
         {{other}}

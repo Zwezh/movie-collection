@@ -13,4 +13,5 @@ export interface IMovie {
     russianName: string;
     translation: string;
     year: number;
+    description: string;
 }

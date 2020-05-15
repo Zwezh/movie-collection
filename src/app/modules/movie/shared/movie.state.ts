@@ -8,6 +8,7 @@ export const initialMovieState: IMovieState = {
         movieGlobalKey: null,
         actors: '',
         country: '',
+        description: '',
         director: '',
         duration: '',
         genre: '',

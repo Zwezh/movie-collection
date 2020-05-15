@@ -1,7 +1,4 @@
 export class BaseDto {
-    actors: string;
-    country: string;
-    director: string;
     duration: string;
     genre: string;
     id: number;
@@ -9,4 +6,5 @@ export class BaseDto {
     rating: number;
     russianName: string;
     year: number;
+    description: string;
 }

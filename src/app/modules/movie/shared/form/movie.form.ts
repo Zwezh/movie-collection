@@ -3,6 +3,7 @@ import {
     FormGroup,
     Validators
 } from '@angular/forms';
+import { KinopoiskDto } from '@appApi/kinopoisk/dto/kinopoisk.dto';
 
 import { IMovie } from '../interfaces';
 
@@ -48,6 +49,11 @@ export class MovieForm extends FormGroup {
         return this.get('year') as FormControl;
     }
 
+    public get description(): FormControl {
+        return this.get('description') as FormControl;
+    }
+
+
     constructor() {
         super({
             actors: new FormControl('', Validators.required),
@@ -62,7 +68,8 @@ export class MovieForm extends FormGroup {
             rating: new FormControl('', Validators.required),
             russianName: new FormControl('', Validators.required),
             translation: new FormControl('', Validators.required),
-            year: new FormControl('', Validators.compose([Validators.required, Validators.minLength(4)]))
+            year: new FormControl('', Validators.compose([Validators.required, Validators.min(1900)])),
+            description: new FormControl('')
         });
     }
 
@@ -81,10 +88,29 @@ export class MovieForm extends FormGroup {
                 rating: movie.rating,
                 russianName: movie.russianName,
                 translation: movie.translation,
-                year: movie.year
+                year: movie.year,
+                description: movie.description
             },
             {
                 emitEvent: false
+            }
+        );
+    }
+
+    updateFormValuesFromKinopoisk(movie: KinopoiskDto): void {
+        this.patchValue(
+            {
+                actors: movie.actors.join(', '),
+                country: movie.country.join(', '),
+                director: movie.director.join(', '),
+                duration: movie.duration,
+                genre: movie.genre,
+                id: movie.id,
+                originalName: movie.originalName,
+                rating: movie.rating,
+                russianName: movie.russianName,
+                year: movie.year,
+                description: movie.description
             }
         );
     }

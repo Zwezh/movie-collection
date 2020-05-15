@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-export class ApiService {
+export abstract class BaseApiService {
 
     private _apiPrefix = 'api/';
 
