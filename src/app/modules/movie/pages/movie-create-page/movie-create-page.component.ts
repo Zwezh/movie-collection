@@ -47,7 +47,7 @@ export class MovieCreatePageComponent implements OnDestroy {
     onSave(): void {
         this._modelService.createMovie(this.form.value).pipe(takeUntil(this._destroy$)).subscribe(() => {
             this._router.navigateByUrl(MovieResourcesConstants.MOVIE_LIST_PAGE);
-            this._messages.addSuccessMessage(this._translator.instant('savedSuccesss'))
+            this._messages.addSuccessMessage(this._translator.instant('savedSuccesss'));
         });
 
     }

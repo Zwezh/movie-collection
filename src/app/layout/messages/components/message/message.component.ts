@@ -22,7 +22,7 @@ export class MessageComponent implements OnInit {
         this.onCompletedEvent = new EventEmitter<IMessage>();
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
         setTimeout(() => this.onCompletedEvent.emit(this.message), 4500);
     }
 

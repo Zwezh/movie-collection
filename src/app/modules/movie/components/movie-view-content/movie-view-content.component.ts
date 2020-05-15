@@ -1,7 +1,9 @@
 import {
     ChangeDetectionStrategy,
     Component,
+    EventEmitter,
     Input,
+    Output,
     ViewEncapsulation
 } from '@angular/core';
 
@@ -17,9 +19,14 @@ import { IMovie } from '../../shared/interfaces';
 })
 export class MovieViewContentComponent {
 
-    @Input() movie: IMovie
+    @Input() movie: IMovie;
+    @Output('deleteMovie') onDeleteEvent: EventEmitter<void>;
 
-    get imageUrl() {
+    constructor() {
+        this.onDeleteEvent = new EventEmitter<void>();
+    }
+
+    get imageUrl(): string {
         return `${MovieResourcesConstants.GET_IMAGE}${this.movie.id}`;
     }
 
@@ -29,5 +36,9 @@ export class MovieViewContentComponent {
 
     get movieEditPage(): string {
         return MovieResourcesConstants.MOVIE_EDIT_PAGE.replace(':movieGlobalKey', this.movie.movieGlobalKey);
+    }
+
+    onDelete(): void {
+        this.onDeleteEvent.emit();
     }
 }

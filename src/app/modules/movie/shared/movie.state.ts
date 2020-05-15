@@ -22,4 +22,4 @@ export const initialMovieState: IMovieState = {
         year: null
     },
     movieCollection: new Array<IMovie>()
-}
+};

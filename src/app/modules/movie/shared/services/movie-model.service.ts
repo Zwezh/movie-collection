@@ -57,12 +57,16 @@ export class MovieModelService {
         const movie = { ...this._store.selectedMovie, ...formValue };
         return this._apiService.updateMovie(movie).pipe(
             tap((response: MovieDto) => {
-                this._store.setSelectedMovie(response)
+                this._store.setSelectedMovie(response);
             }));
     }
 
     createMovie(formValue: Partial<IMovie>): Observable<any> {
         return this._apiService.addMovie(formValue as CreateMovieDto);
+    }
+
+    deleteMovie(movieGlobalKey: string): Observable<any> {
+        return this._apiService.deleteMovie(movieGlobalKey);
     }
 
     loadMovieFromKinopoisk(id: number): Observable<KinopoiskDto> {
@@ -73,7 +77,7 @@ export class MovieModelService {
         return this._kinopoiskApiService.loadPoster(id);
     }
 
-    private findMovieByGlobalKey(movieGlobalKey): IMovie {
+    private findMovieByGlobalKey(movieGlobalKey: string): IMovie {
         return this._store.movieList.find((movie: IMovie) => movie.movieGlobalKey === movieGlobalKey);
     }
 }

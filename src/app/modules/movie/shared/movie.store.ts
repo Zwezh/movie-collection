@@ -16,7 +16,7 @@ export class MovieStore {
     }
 
     private _selectedMovie$: BehaviorSubject<IMovie>;
-    get selectedMovie$() {
+    get selectedMovie$(): Observable<IMovie> {
         return this._selectedMovie$.asObservable();
     }
     get selectedMovie(): IMovie {

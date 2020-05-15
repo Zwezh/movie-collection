@@ -23,6 +23,7 @@
     },
     "back": "Return to list",
     "editMovie": "Edit movie",
+    "deleteMovie": "Delete movie",
     "emptyFilter": "All fields",
     "defaultOrder": "Default",
     "by": "by",
@@ -34,6 +35,7 @@
     "loadPosterFromKinopoisk": "Load poster from Kinopoisk",
     "cancel": "Cancel",
     "savedSuccesss": "The movie was successfully saved",
+    "deletedSuccesss": "The movie was successfully deleted",
     "loadKinopoiskSuccesss": "The movie was successfully loaded from Kinopoisk",
     "errors": {
         "required": "This field is required",

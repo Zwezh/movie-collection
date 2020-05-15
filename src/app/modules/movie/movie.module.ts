@@ -48,7 +48,7 @@ const COMPONENTS = [
     MovieRatingComponent,
     MovieFilterPipe,
     MovieOrderByPipe
-]
+];
 
 @NgModule({
     imports: [

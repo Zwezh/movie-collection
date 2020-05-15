@@ -20,7 +20,7 @@ export class MessagesComponent {
     messages$: Observable<Array<IMessage>>;
 
     constructor(private _messagesStore: MessagesStore) {
-        this.messages$ = _messagesStore.messages$
+        this.messages$ = _messagesStore.messages$;
     }
 
     onCompleted(message: IMessage): void {

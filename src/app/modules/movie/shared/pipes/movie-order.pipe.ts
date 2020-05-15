@@ -7,7 +7,7 @@ import { IMovie } from '../interfaces';
 
 @Pipe({
     name: 'movieOrderBy',
-    pure:false
+    pure: false
 })
 export class MovieOrderByPipe implements PipeTransform {
 
@@ -21,7 +21,7 @@ export class MovieOrderByPipe implements PipeTransform {
     private orderBy(collection: Array<IMovie>, order: string, column: string): Array<IMovie> {
         collection.sort((a: IMovie, b: IMovie) => {
             if (a[column] < b[column]) {
-                return -1
+                return -1;
             } else if (a[column] > b[column]) {
                 return 1;
             } else {

@@ -14,7 +14,7 @@ export class ActivityPanelService {
 
     private activityPanel: ActivityPanelComponent;
 
-    initialize(panel: ActivityPanelComponent) {
+    initialize(panel: ActivityPanelComponent): void {
         this.activityPanel = panel;
     }
 

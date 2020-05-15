@@ -15,7 +15,7 @@ import {
     styleUrls: ['./activity-panel.component.scss'],
     selector: 'mc-activity-panel',
     templateUrl: './activity-panel.component.html',
-    changeDetection:ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class ActivityPanelComponent implements OnInit {
@@ -25,7 +25,7 @@ export class ActivityPanelComponent implements OnInit {
     private _open: boolean;
     get open(): boolean {
         return this._open;
-    };
+    }
 
     private _backDropUpClick: any;
     private _controlComponentByUp: any;
@@ -41,7 +41,7 @@ export class ActivityPanelComponent implements OnInit {
         this._open = false;
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.activityPanelService.initialize(this);
     }
 
@@ -64,7 +64,7 @@ export class ActivityPanelComponent implements OnInit {
             this.title = title;
         }
 
-        let observable = new Observable((observer: any) => {
+        const observable = new Observable((observer: any) => {
             this._observerPanel = observer;
         });
         this.onAnimationDone();

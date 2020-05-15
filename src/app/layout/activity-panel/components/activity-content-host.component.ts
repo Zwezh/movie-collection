@@ -7,7 +7,7 @@
     Type,
     ViewChild,
     ViewContainerRef
-} from '@angular/core'
+} from '@angular/core';
 
 @Component({
     selector: 'mc-activity-content-host',
@@ -16,7 +16,7 @@
 })
 export class ActivityContentHostComponent implements AfterViewInit {
 
-    @ViewChild('dynamicComponent', { read: ViewContainerRef }) myRef;
+    @ViewChild('dynamicComponent', { read: ViewContainerRef }) myRef: ViewContainerRef;
     @Input('innerComponent') innerComponent: Type<any>;
 
     componentRef: ComponentRef<Type<any>>;

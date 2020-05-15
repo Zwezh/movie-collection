@@ -32,7 +32,7 @@ export class MovieListPageComponent implements OnInit, OnDestroy {
         this.search = '';
         this.movieList$ = _modelService.movieList;
         this._destroy$ = new Subject();
-        this.isHasItems = false
+        this.isHasItems = false;
     }
 
     ngOnInit(): void {

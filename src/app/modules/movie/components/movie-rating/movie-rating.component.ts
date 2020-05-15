@@ -24,13 +24,13 @@ export class MovieRatingComponent {
         return ratingCollection;
     }
 
-    private ratingRound() {
+    private ratingRound(): number {
         const d = Math.floor(this.rating);
         const i = this.rating % d;
         return i < 0.25 ? d : (i < 0.75 ? d + 0.5 : d + 1);
     }
 
-    private getRatingClass(movieRating: number, index: number, isHalfPart): string {
+    private getRatingClass(movieRating: number, index: number, isHalfPart: boolean): string {
         let rating = 'las la-star';
         if (index >= movieRating) {
             rating = 'lar la-star';

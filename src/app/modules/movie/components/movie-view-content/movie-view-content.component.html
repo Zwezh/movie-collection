@@ -20,6 +20,9 @@
                 <a [routerLink]="movieEditPage"
                    class="text-title"
                    title="{{'editMovie' | translate}}"><i class="las la-pen"></i></a>
+                <a (click)="onDelete()"
+                   class="text-title"
+                   title="{{'deleteMovie' | translate}}"><i class="las la-trash"></i></a>
             </div>
         </div>
         <mc-list-item fieldClass="view__field"

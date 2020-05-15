@@ -23,8 +23,8 @@ export class TranslatorComponent implements OnInit, OnDestroy {
 
     private _onChangeLanguageSubscriber: Subscription;
 
-    get languages() {
-        return LanguagesConstants
+    get languages(): any {
+        return LanguagesConstants;
     }
     selectedLanguage$: BehaviorSubject<string>;
 
@@ -34,15 +34,15 @@ export class TranslatorComponent implements OnInit, OnDestroy {
         this.initLanguage();
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
         this._onChangeLanguageSubscriber = this._translateService.onLangChange.subscribe((lagChange: LangChangeEvent) => {
             this._loaderService.startLoading();
             this.selectedLanguage$.next(lagChange.lang);
             setTimeout(() => this._loaderService.stopLoading(), 500);
-        })
+        });
     }
 
-    ngOnDestroy() {
+    ngOnDestroy(): void {
         this._onChangeLanguageSubscriber.unsubscribe();
     }
 

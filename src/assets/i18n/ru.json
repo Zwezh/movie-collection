@@ -23,6 +23,7 @@
     },
     "back": "Вернуться у списку",
     "editMovie": "Редактировать фильм",
+    "deleteMovie": "Удалить фильм",
     "emptyFilter": "Все поля",
     "defaultOrder": "Без сортировки",
     "by": "по",
@@ -34,9 +35,10 @@
     "loadPosterFromKinopoisk": "Загрзуить постер с кинопоиска",
     "cancel": "Отменить",
     "savedSuccesss": "Фильм успешно был сохранен",
+    "deletedSuccesss": "Фильм успешно был удален",
     "loadKinopoiskSuccesss": "Фильм успешно был из Kinopoisk",
     "errors": {
         "required": "Данное поле является обязательным",
-        "ьшт": "Слишком ранняя дата"
+        "min": "Слишком ранняя дата"
     }
 }

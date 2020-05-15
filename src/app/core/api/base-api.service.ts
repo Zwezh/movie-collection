@@ -3,12 +3,14 @@ import { Observable } from 'rxjs';
 
 export abstract class BaseApiService {
 
-    private _apiPrefix = 'api/';
+    private _apiPrefix: string;
 
-    constructor(protected http: HttpClient) { }
+    constructor(protected http: HttpClient) {
+        this._apiPrefix = 'api/';
+    }
 
     protected get(url: string, params?: any): Observable<any> {
-        return this.http.get(`${this._apiPrefix}${url}`, { params })
+        return this.http.get(`${this._apiPrefix}${url}`, { params });
     }
 
     protected post(url: string, params?: any): Observable<any> {
@@ -21,6 +23,6 @@ export abstract class BaseApiService {
     }
 
     protected delete(url: string, params?: any): Observable<any> {
-        return this.http.post(`${this._apiPrefix}${url}`, params);
+        return this.http.delete(`${this._apiPrefix}${url}`, params);
     }
 }

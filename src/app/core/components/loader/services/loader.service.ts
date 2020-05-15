@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@appShared';
+import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -7,7 +8,7 @@ import { Store } from '@appShared';
 export class LoaderService {
     private _countLoadings: number;
     private _loading$: Store<boolean>;
-    get loading$() {
+    get loading$(): Observable<boolean> {
         return this._loading$.state$;
     }
 

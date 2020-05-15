@@ -23,8 +23,8 @@ export class MovieApiService extends BaseApiService {
         return this.get(this._movieUrl, null);
     }
 
-    getMovie(movieGlobalKey): Observable<MovieDto> {
-        return this.get(`${this._movieUrl}/${movieGlobalKey}`, null);
+    getMovie(movieGlobalKey: string): Observable<MovieDto> {
+        return this.get(`${this._movieUrl}/${movieGlobalKey}`);
     }
 
     addMovie(movie: CreateMovieDto): Observable<MovieDto> {
@@ -33,5 +33,9 @@ export class MovieApiService extends BaseApiService {
 
     updateMovie(movie: MovieDto): Observable<MovieDto> {
         return this.put(`${this._movieUrl}/${movie.movieGlobalKey}`, movie);
+    }
+
+    deleteMovie(movieGlobalKey: string): Observable<MovieDto> {
+        return this.delete(`${this._movieUrl}/${movieGlobalKey}`);
     }
 }

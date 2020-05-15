@@ -25,7 +25,7 @@ export class MovieEditContentComponent {
     @Input() movie: IMovie;
     @Input() form: MovieForm;
 
-    get imageUrl() {
+    get imageUrl(): string {
         return `${MovieResourcesConstants.GET_IMAGE}${this.movie.id}`;
     }
 
@@ -44,13 +44,13 @@ export class MovieEditContentComponent {
     onLoadFromKinopoisk(): void {
         this._modelService.loadMovieFromKinopoisk(this.form.id.value).subscribe((dto: KinopoiskDto) => {
             this.form.updateFormValuesFromKinopoisk(dto);
-            this._messages.addSuccessMessage(this._translator.instant('loadKinopoiskSuccesss'))
-        })
+            this._messages.addSuccessMessage(this._translator.instant('loadKinopoiskSuccesss'));
+        });
     }
 
     onLoadPoster(): void {
         this._modelService.loadPoster(this.form.id.value).subscribe(() => {
-            this._messages.addSuccessMessage(this._translator.instant('loadKinopoiskSuccesss'))
-        })
+            this._messages.addSuccessMessage(this._translator.instant('loadKinopoiskSuccesss'));
+        });
     }
 }

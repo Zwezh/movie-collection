@@ -1,6 +1,6 @@
 import { IMovie } from './movie.interface';
 
 export interface IMovieState {
-    movie: IMovie
+    movie: IMovie;
     movieCollection: Array<IMovie>;
 }

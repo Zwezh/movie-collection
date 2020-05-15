@@ -17,6 +17,6 @@ export class LoadingScreenInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         this.loadingScreenService.startLoading();
         return next.handle(request).pipe(finalize(() => this.loadingScreenService.stopLoading()));
-    };
+    }
 
 }
