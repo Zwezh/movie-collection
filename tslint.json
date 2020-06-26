@@ -1,15 +1,23 @@
 {
     "extends": "tslint:recommended",
     "rules": {
+    "align": {
+      "options": [
+        "parameters",
+        "statements"
+      ]
+    },
         "array-type": [
             true,
             "generic"
         ],
         "arrow-parens": true,
+    "arrow-return-shorthand": true,
         "component-class-suffix": [
             true,
             "Component"
         ],
+    "curly": true,
         "directive-class-suffix": [
             true,
             "Directive"
@@ -24,6 +32,7 @@
             "element",
             "kebab-case"
         ],
+    "import-spacing": true,
         "interface-name": false,
         "max-classes-per-file": [
             true,
@@ -34,6 +43,24 @@
             160
         ],
         "member-access": false,
+    "typedef-whitespace": {
+      "options": [
+        {
+          "call-signature": "nospace",
+          "index-signature": "nospace",
+          "parameter": "nospace",
+          "property-declaration": "nospace",
+          "variable-declaration": "nospace"
+        },
+        {
+          "call-signature": "onespace",
+          "index-signature": "onespace",
+          "parameter": "onespace",
+          "property-declaration": "onespace",
+          "variable-declaration": "onespace"
+        }
+      ]
+    },
         "variable-name": {
             "options": [
                 "ban-keywords",
@@ -150,7 +177,17 @@
         "template-banana-in-box": true,
         "use-lifecycle-interface": true,
         "use-pipe-transform-interface": true
-    },
+    ,    "whitespace": {
+      "options": [
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-separator",
+        "check-type",
+        "check-typecast"
+      ]
+    }
+},
     "rulesDirectory": [
         "codelyzer"
     ]
