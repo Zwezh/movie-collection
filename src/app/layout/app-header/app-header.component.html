@@ -3,9 +3,9 @@
         <div class="text-biggest _top-offset">{{ 'appName' | translate }}</div>
     </mc-header>
     <div class="header-content">
-        <nav>
-            <a [routerLink]="[ '/movies' ]">Movies</a>
-            <a [routerLink]="[ '/wishes' ]">Wishes</a>
+        <nav class="nav app-header__nav">
+            <a class="text-subtitle link" [routerLink]="[ '/movies' ]">Movies</a>
+            <!-- <a class="text-subtitle link" [routerLink]="[ '/wishes' ]">Wishes</a> -->
         </nav>
         <mc-translator class="language-content"></mc-translator>
     </div>
