@@ -7,6 +7,10 @@ const routes: Routes = [
         loadChildren: () => import('./modules/movie/movie.module').then((m) => m.MovieModule)
     },
     {
+        path: 'wishes',
+        loadChildren: () => import('./modules/wishes/wishes.module').then((m) => m.WishesModule)
+    },
+    {
         path: '**',
         redirectTo: '/movie'
     }

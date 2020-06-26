@@ -1,0 +1,1 @@
+export * from './wishes-list-page/wishes-list-page.component';

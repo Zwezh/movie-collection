@@ -1,0 +1,18 @@
+<div class="page movies__page"
+     *ngIf="wishList.length > 0; else hasNoItems;">
+     <div class="list">
+         <div class="wish" *ngFor="let wish of wishList">
+            <mc-wishes-item [wish]="wish"></mc-wishes-item>
+         </div>
+     </div>
+</div>
+<ng-template #hasNoItems>
+    <div class="empty">
+        <p class="container empty__container text-subtitle"
+           title="hasNoMovies">
+            <!-- {{'hasNoMovies' | translate}} -->
+        </p>
+    </div>
+</ng-template>
+<!-- <a [routerLink]="[ 'add']"
+   class="add-link"><i class="las la-plus"></i></a> -->

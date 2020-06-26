@@ -1,0 +1,1 @@
+export * from './wishes-item/wishes-item.component';
