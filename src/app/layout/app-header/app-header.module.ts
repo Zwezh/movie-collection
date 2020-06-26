@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { HeaderModule } from '@appComponents';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -11,6 +12,7 @@ import { AppHeaderComponent } from './app-header.component';
 
 @NgModule({
     imports: [
+        RouterModule,
         CommonModule,
         TranslateModule,
         TranslatorModule,

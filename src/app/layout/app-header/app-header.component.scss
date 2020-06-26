@@ -1,12 +1,22 @@
+@import "./../../../assets/styles/colors";
+
 .app-header {
   position: relative;
+  background: linear-gradient(to right, rgba(251, 64, 75, 0.8), rgba(187, 5, 2, .8)), url("../../../assets/images/header.jpg");
+  background-size: cover;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
 
-  .language-content {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    right: 10px;
+.header-content {
+    height: 50px;
+    line-height: 50px;
     display: flex;
-    align-items: center;
-  }
+    justify-content: center;
+    border-top: 1px solid rgba(251, 64, 75, 0.8);
+}
+
+._top-offset {
+  padding-top: 20px;
 }

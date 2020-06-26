@@ -1,21 +1,19 @@
 @import "./../../../../assets/styles/colors";
 
 .m-header {
-    text-align: center;
-    padding: 12px;
+  text-align: center;
+  padding: 12px;
+  color: $gray-lightest;
 }
 
 .primary {
-    background-color: $primary;
-    color: $gray-lightest;
+  background-color: $primary;
 }
 
 .warning {
-    background-color: $warning;
-    color: $gray-lightest;
+  background-color: $warning;
 }
 
 .danger {
-    background-color: $danger;
-    color: $gray-lightest;
+  background-color: $danger;
 }

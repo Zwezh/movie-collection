@@ -1,6 +1,12 @@
 <header class="app-header">
-    <mc-header type="danger">
-        <div>{{ 'appName' | translate }}</div>
+    <mc-header>
+        <div class="text-biggest _top-offset">{{ 'appName' | translate }}</div>
     </mc-header>
-    <mc-translator class="language-content"></mc-translator>
+    <div class="header-content">
+        <nav>
+            <a [routerLink]="[ '/movies' ]">Movies</a>
+            <a [routerLink]="[ '/wishes' ]">Wishes</a>
+        </nav>
+        <mc-translator class="language-content"></mc-translator>
+    </div>
 </header>

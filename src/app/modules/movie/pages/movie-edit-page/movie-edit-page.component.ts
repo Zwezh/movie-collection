@@ -24,7 +24,8 @@ import { MovieModelService } from '../../shared/services';
 export class MovieEditPageComponent implements OnInit, OnDestroy {
     private _movieGlobalKey: string;
     private _destroy$: Subject<void>;
-    private form: MovieForm;
+
+    form: MovieForm;
     movie$: Observable<IMovie>;
 
     get isDisable(): boolean {
@@ -44,7 +45,7 @@ export class MovieEditPageComponent implements OnInit, OnDestroy {
 
     }
 
-    ngOnInit(): void  {
+    ngOnInit(): void {
         this._modelService.getSelectedMovie(this._movieGlobalKey)
             .pipe(takeUntil(this._destroy$)).subscribe((movie: IMovie) => {
                 this.form.updateFormValues(movie);

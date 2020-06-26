@@ -22,7 +22,8 @@ import { MovieModelService } from '../../shared/services';
 })
 export class MovieCreatePageComponent implements OnDestroy {
     private _destroy$: Subject<void>;
-    private form: MovieForm;
+
+    form: MovieForm;
     movie$: Observable<IMovie>;
 
     get isDisable(): boolean {
