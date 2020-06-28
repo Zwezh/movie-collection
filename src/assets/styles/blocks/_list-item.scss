@@ -1,25 +1,25 @@
-@import "./../../../../../assets/styles/colors";
+@import "../colors";
 
-.movie-item {
+.list-item {
   border: 1px solid $gray-lighter;
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   background: $white;
 
   &__header {
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.3rem;
     border-bottom: 1px solid $gray-lighter;
   }
 
   &__name+&__name {
     position: relative;
-    margin-left: 20px;
+    margin-left: 1.5rem;
 
     &::before {
       content: '|';
       position: absolute;
-      left: -11px;
+      left: -1rem;
     }
   }
 
@@ -38,6 +38,10 @@
   }
 
   &__label {
-    min-width: 75px;
+    min-width: 5rem;
+  }
+
+  &_offset {
+    margin: 0.75rem 1.5rem;
   }
 }

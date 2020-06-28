@@ -1,36 +1,40 @@
-<div class="movie-item">
-    <div class="movie-item__header text-description">
-        <span class="movie-item__name"
+<div class="list-item">
+    <div class="list-item__header text-description">
+        <span class="list-item__name"
               title="{{wish.russianName}}">{{wish.russianName}}</span>
-        <span class="movie-item__name"
+        <span class="list-item__name"
               title="{{wish.originalName}}">{{wish.originalName}}</span>
     </div>
-    <div class="movie-item__body">
-        <div class="movie-item__block">
-            <mc-list-item fieldClass="movie-item__field"
-                          labelClass="movie-item__label"
+    <div class="list-item__body">
+        <div class="list-item__block">
+            <mc-list-item fieldClass="list-item__field"
+                          labelClass="list-item__label"
                           [label]="'movie.rating' | translate"
                           [value]="wish.rating"></mc-list-item>
-            <!-- <mc-list-item fieldClass="movie-item__field"
-                          labelClass="movie-item__label"
+            <mc-list-item fieldClass="list-item__field"
+                          labelClass="list-item__label"
                           [label]="'movie.country' | translate"
-                          [value]="wish.country"></mc-list-item> -->
+                          [value]="wish.country"></mc-list-item>
         </div>
-        <div class="movie-item__block">
-            <mc-list-item fieldClass="movie-item__field"
-                          labelClass="movie-item__label"
+        <div class="list-item__block">
+            <mc-list-item fieldClass="list-item__field"
+                          labelClass="list-item__label"
                           [label]="'movie.year' | translate"
                           [value]="wish.year"></mc-list-item>
-            <mc-list-item fieldClass="movie-item__field"
-                          labelClass="movie-item__label"
+            <mc-list-item fieldClass="list-item__field"
+                          labelClass="list-item__label"
                           [label]="'movie.genre' | translate"
                           [value]="wish.genre"></mc-list-item>
         </div>
-        <div class="movie-item__block">
-            <mc-list-item fieldClass="movie-item__field"
-                          labelClass="movie-item__label"
-                          [label]="'movie.duration' | translate"
-                          [value]="wish.duration"></mc-list-item>
+        <div class="list-item__block">
+            <mc-list-item fieldClass="list-item__field"
+                          labelClass="list-item__label"
+                          [label]="'movie.actors' | translate"
+                          [value]="wish.actors"></mc-list-item>
+            <mc-list-item fieldClass="list-item__field"
+                          labelClass="list-item__label"
+                          [label]="'movie.description' | translate"
+                          [value]="wish.description"></mc-list-item>
         </div>
     </div>
 </div>

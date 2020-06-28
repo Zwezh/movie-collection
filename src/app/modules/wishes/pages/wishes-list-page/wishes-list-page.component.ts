@@ -1,5 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { BaseDto } from '@appApi/base.dto';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+
+import { IWish } from '../../shared/interfaces';
+import { WishesModelService } from '../../shared/services';
 
 @Component({
     selector: 'mc-wishes-list-page',
@@ -7,17 +11,30 @@ import { BaseDto } from '@appApi/base.dto';
     styleUrls: ['./wishes-list-page.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class WishesListPageComponent implements OnInit {
+export class WishesListPageComponent implements OnInit, OnDestroy {
 
-    wishList: Array<BaseDto>;
-    constructor() { 
-        this.wishList = new Array<BaseDto>();
+
+    private _destroy$: Subject<void>;
+
+    search: string;
+    wishCollection$: Observable<Array<IWish>>;
+    isHasItems: boolean;
+
+    constructor(
+        private _modelService: WishesModelService
+    ) {
+        this.search = '';
+        this.wishCollection$ = _modelService.wishCollection;
+        this._destroy$ = new Subject();
+        this.isHasItems = false;
     }
 
     ngOnInit(): void {
-        for (let index = 0; index < 20; index++) {
-            this.wishList.push(new BaseDto());
-        }
+        this._modelService.getMovieCollection().pipe(takeUntil(this._destroy$)).subscribe();
     }
 
+    ngOnDestroy(): void {
+        this._destroy$.next();
+        this._destroy$.complete();
+    }
 }

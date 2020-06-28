@@ -3,7 +3,7 @@
     <mc-movie-actions #actions></mc-movie-actions>
     <cdk-virtual-scroll-viewport class="movie-list"
                                  [itemSize]="81">
-        <div class="movie-list__item"
+        <div class="list-item_offset"
              *cdkVirtualFor="let movie of movieList$ | async | movieFilter: actions.search: actions.filter | movieOrderBy: 'asc': actions.order"
              [@fadeInContentByOpacity]>
             <mc-movie-item [movie]="movie"></mc-movie-item>

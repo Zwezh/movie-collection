@@ -1,0 +1,25 @@
+@import "./../../../../../assets/styles/colors";
+
+.wishes-list {
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    flex: auto;
+    overflow: auto;
+    contain: strict;
+  }
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+
+
+  &__container {
+    display: inline-flex;
+    padding: 40px 80px;
+  }
+}

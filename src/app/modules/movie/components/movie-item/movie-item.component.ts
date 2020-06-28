@@ -10,7 +10,6 @@ import { IMovie } from '../../shared/interfaces';
 @Component({
     selector: 'mc-movie-item',
     templateUrl: './movie-item.component.html',
-    styleUrls: ['./movie-item.component.scss'],
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush
 })

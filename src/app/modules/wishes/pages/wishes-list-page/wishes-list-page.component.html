@@ -1,16 +1,17 @@
-<div class="page movies__page"
-     *ngIf="wishList.length > 0; else hasNoItems;">
-     <div class="list">
-         <div class="wish" *ngFor="let wish of wishList">
+<div class="page wishes-list"
+     *ngIf="(wishCollection$ | async).length > 0; else hasNoItems;">
+    <div class="wishes-list__container">
+        <div class="list-item_offset"
+             *ngFor="let wish of wishCollection$ | async">
             <mc-wishes-item [wish]="wish"></mc-wishes-item>
-         </div>
-     </div>
+        </div>
+    </div>
 </div>
 <ng-template #hasNoItems>
     <div class="empty">
         <p class="container empty__container text-subtitle"
            title="hasNoMovies">
-            <!-- {{'hasNoMovies' | translate}} -->
+            {{'hasNoMovies' | translate}}
         </p>
     </div>
 </ng-template>
