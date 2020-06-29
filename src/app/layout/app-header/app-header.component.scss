@@ -23,10 +23,11 @@
   color: $white;
   transition: all 0.3s ease-out;
     padding: 0.75rem 2rem;
+    border-radius: 0.125rem;
   &:hover {
     transition: all 0.3s ease-out;
-    background-color: $white;
-    color: $danger;
+    background-color: #ffffff22; 
+    color: $white;
   }
 
   &+.link {
@@ -49,5 +50,5 @@
 }
 
 ._active {
-    box-shadow: inset 0px 0px 0px 0.05rem $white;
+  background-color: #ffffff66; 
 }

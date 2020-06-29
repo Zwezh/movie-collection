@@ -30,6 +30,7 @@
     "search": "Search",
     "order": "Order",
     "hasNoMovies": "Has no movies",
+    "hasNoWishes": "Has no movies in wishes list",
     "save": "Save",
     "loadFromKinopoisk": "Load movie from Kinopoisk",
     "loadPosterFromKinopoisk": "Load poster from Kinopoisk",

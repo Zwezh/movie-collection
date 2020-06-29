@@ -9,25 +9,6 @@
   flex: auto;
 }
 
-.add-link {
-  position: fixed;
-  font-size: 2.25rem;
-  bottom: 30px;
-  right: 30px;
-  padding: 0.5rem;
-  background-color: $primary;
-  color: $white;
-  border-radius: 50%;
-  opacity: 0.5;
-  transition: all 0.5s ease-in-out;
-
-  &:hover {
-    opacity: 0.8;
-    transform: rotate(270deg);
-    transition: all 0.5s ease-in-out;
-  }
-}
-
 .empty {
   display: flex;
   justify-content: center;

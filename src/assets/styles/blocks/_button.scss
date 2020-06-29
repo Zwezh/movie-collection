@@ -66,3 +66,25 @@
     cursor: not-allowed;
   }
 }
+
+.add-btn {
+  position: fixed;
+  font-size: 3rem;
+  bottom: 30px;
+  right: 30px;
+  padding: 0.5rem;
+  background-color: #3BA5CA66;
+  color: $white;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+
+  &:hover {
+    opacity: 0.8;
+    transform: rotate(270deg);
+    transition: all 0.5s ease-in-out;
+    color: $white;
+  }
+}

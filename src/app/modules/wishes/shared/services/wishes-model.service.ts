@@ -39,20 +39,7 @@ export class WishesModelService {
     getMovieCollection(): Observable<any> {
         this._store.resetState();
         return this._apiService.getWishCollection().pipe(
-            tap((response: Array<WishDto>) => this._store.setWishCollection([{
-                actors: "Маколей Калкин, Джо Пеши, Дэниел Стерн, Кэтрин О’Хара, Джон Хёрд, Робертс Блоссом, Джерри Бэммен, Девин Рэтрей, Джон Кэнди, Киран Калкин, ...",
-                country: "США",
-                director: "Крис Коламбус",
-                duration: "103 мин. / 01:43",
-                genre: "комедия, семейный",
-                id: 8124,
-                originalName: "Home Alone",
-                rating: 8.238,
-                russianName: "Один дома",
-                year: 1990,
-                description: "Description",
-                wishGlobalKey: "5e8c93dcce903e5d90b21af0"
-            }]))
+            tap((response: Array<WishDto>) => this._store.setWishCollection([...response]))
         );
     }
 

@@ -5,19 +5,20 @@
   width: 3rem;
   color: $white;
   padding: 0.5rem 1rem;
+  border-radius: 0.125rem;
 
   &:hover {
     transition: all 0.3s ease-out;
-    background-color: $white;
-    color: $danger;
+    background-color: #ffffff22;
+    color: $white;
   }
 
-  &+.btn-language {
+  & + .btn-language {
     position: relative;
     margin-left: 2rem;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: -1rem;
       top: 0.5rem;
@@ -28,5 +29,6 @@
 }
 
 .active {
-  border: 1px solid $gray-lighter;
+  background-color: #ffffff66;
+  color: $white;
 }
